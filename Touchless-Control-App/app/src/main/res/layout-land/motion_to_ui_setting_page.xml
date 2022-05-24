@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/setting_title_margin"
+                android:text="메인화면 동작" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/setting_item_margin"
+                android:layout_marginBottom="@dimen/setting_item_margin"
+                android:gravity="right"
+                android:orientation="horizontal"
+                android:paddingRight="@dimen/setting_item_padding"
+                android:weightSum="@integer/setting_layout_weight">
+
+                <TextView
+                    android:id="@+id/textView_main_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="@integer/setting_text_weight"
+                    android:text="이전동영상" />
+
+                <Spinner
+                    android:id="@+id/spinner_main_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="@integer/setting_spinner_weight"
+                    android:spinnerMode="dropdown" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/setting_item_margin"
+                android:layout_marginBottom="@dimen/setting_item_margin"
+                android:gravity="right"
+                android:orientation="horizontal"
+                android:paddingRight="@dimen/setting_item_padding"
+                android:weightSum="@integer/setting_layout_weight">
+
+                <TextView
+                    android:id="@+id/textView_main_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="@integer/setting_text_weight"
+                    android:text="다음동영상" />
+
+                <Spinner
+                    android:id="@+id/spinner_main_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="@integer/setting_spinner_weight"
+                    android:spinnerMode="dropdown" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/setting_item_margin"
+                android:layout_marginBottom="@dimen/setting_item_margin"
+                android:gravity="right"
+                android:orientation="horizontal"
+                android:paddingRight="@dimen/setting_item_padding"
+                android:weightSum="@integer/setting_layout_weight">
+
+                <TextView
+                    android:id="@+id/textView_main_3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="@integer/setting_text_weight"
+                    android:text="동영상재생" />
+
+                <Spinner
+                    android:id="@+id/spinner_main_3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="@integer/setting_spinner_weight"
+                    android:spinnerMode="dropdown" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/setting_item_margin"
+                android:layout_marginBottom="@dimen/setting_item_margin"
+                android:gravity="right"
+                android:orientation="horizontal"
+                android:paddingRight="@dimen/setting_item_padding"
+                android:weightSum="@integer/setting_layout_weight">
+
+                <TextView
+                    android:id="@+id/textView_main_4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="@integer/setting_text_weight"
+                    android:text="검색창활성화" />
+
+                <Spinner
+                    android:id="@+id/spinner_main_4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="@integer/setting_spinner_weight"
+                    android:spinnerMode="dropdown" />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/textView_video"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/setting_title_margin"
+                android:text="동영상 재생중 화면" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/setting_item_margin"
+                android:layout_marginBottom="@dimen/setting_item_margin"
+                android:gravity="right"
+                android:orientation="horizontal"
+                android:paddingRight="@dimen/setting_item_padding"
+                android:weightSum="@integer/setting_layout_weight">
+
+                <TextView
+                    android:id="@+id/textView_video_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="@integer/setting_text_weight"
+                    android:text="동영상 종료" />
+
+                <Spinner
+                    android:id="@+id/spinner_video_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="@integer/setting_spinner_weight"
+                    android:spinnerMode="dropdown" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/setting_item_margin"
+                android:layout_marginBottom="@dimen/setting_item_margin"
+                android:gravity="right"
+                android:orientation="horizontal"
+                android:paddingRight="@dimen/setting_item_padding"
+                android:weightSum="@integer/setting_layout_weight">
+
+                <TextView
+                    android:id="@+id/textView_video_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="@integer/setting_text_weight"
+                    android:text="일시중지 및 재생" />
+
+                <Spinner
+                    android:id="@+id/spinner_video_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="@integer/setting_spinner_weight"
+                    android:spinnerMode="dropdown" />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/textView_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/setting_title_margin"
+                android:text="검색중 동작" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/setting_item_margin"
+                android:layout_marginBottom="@dimen/setting_item_margin"
+                android:gravity="right"
+                android:orientation="horizontal"
+                android:paddingRight="@dimen/setting_item_padding"
+                android:weightSum="@integer/setting_layout_weight">
+
+                <TextView
+                    android:id="@+id/textView_search_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="@integer/setting_text_weight"
+                    android:text="검색 종료" />
+
+                <Spinner
+                    android:id="@+id/spinner_search_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="@integer/setting_spinner_weight"
+                    android:spinnerMode="dropdown" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/setting_item_margin"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/cancel_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Cancel" />
+
+                    <Button
+                        android:id="@+id/reset_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="RESET" />
+
+                    <Button
+                        android:id="@+id/save_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Save" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

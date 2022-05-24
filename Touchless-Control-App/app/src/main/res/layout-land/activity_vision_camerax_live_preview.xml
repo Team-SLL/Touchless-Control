@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-  <androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#FFFFFF">
 
   <LinearLayout
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
+      android:layout_alignParentBottom="true"
+      android:layout_marginLeft="0dp"
+      android:layout_marginBottom="0dp"
       android:orientation="horizontal"
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintEnd_toEndOf="parent"
@@ -18,7 +20,7 @@
       app:layout_constraintTop_toTopOf="parent"
       app:layout_constraintVertical_bias="1.0">
 
-    <com.teamSLL.mlkit.source.GraphicOverlay
+    <com.teamSLL.mlkit.camera.GraphicOverlay
         android:id="@+id/graphic_overlay"
         android:layout_width="150dp"
         android:layout_height="150dp"
@@ -41,17 +43,28 @@
       android:layout_height="match_parent"
       android:orientation="vertical">
 
-    <SearchView
-        android:id="@+id/search_view"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        app:searchIcon="@drawable/ic_search" />
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="7">
 
-    <fragment
-        android:id="@+id/youtube_player_fragment"
-        android:name="com.google.android.youtube.player.YouTubePlayerFragment"
-        android:layout_width="0dp"
-        android:layout_height="0dp" />
+      <SearchView
+          android:id="@+id/search_view"
+          android:layout_width="300dp"
+          android:layout_height="40dp"
+          android:iconifiedByDefault="false"
+          app:searchIcon="@drawable/ic_search">
+
+      </SearchView>
+      <Button
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:layout_constraintLeft_toLeftOf="parent"
+          app:layout_constraintTop_toTopOf="parent"
+          android:text="Open"
+          android:id="@+id/setting_button" />
+    </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvVideos"
@@ -60,6 +73,12 @@
 
     </androidx.recyclerview.widget.RecyclerView>
 
+    <fragment
+        android:id="@+id/youtube_player_fragment"
+        android:name="com.google.android.youtube.player.YouTubePlayerFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp" />
+
   </LinearLayout>
 
-  </androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

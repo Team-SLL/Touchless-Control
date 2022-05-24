@@ -30,8 +30,8 @@ import com.google.android.gms.common.images.Size;
 import com.google.common.base.Preconditions;
 import com.google.mlkit.vision.face.FaceDetectorOptions;
 import com.teamSLL.mlkit.R;
-import com.teamSLL.mlkit.source.CameraSource;
-import com.teamSLL.mlkit.source.CameraSource.SizePair;
+import com.teamSLL.mlkit.camera.CameraSource;
+import com.teamSLL.mlkit.camera.CameraSource.SizePair;
 
 
 /** Utility class to retrieve shared preferences. */

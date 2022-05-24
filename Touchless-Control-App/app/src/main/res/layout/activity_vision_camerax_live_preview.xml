@@ -18,7 +18,7 @@
       app:layout_constraintTop_toTopOf="parent"
       app:layout_constraintVertical_bias="1.0">
 
-    <com.teamSLL.mlkit.source.GraphicOverlay
+    <com.teamSLL.mlkit.camera.GraphicOverlay
         android:id="@+id/graphic_overlay"
         android:layout_width="150dp"
         android:layout_height="150dp"

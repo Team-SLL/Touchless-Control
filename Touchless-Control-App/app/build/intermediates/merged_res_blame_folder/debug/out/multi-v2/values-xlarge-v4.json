@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\andoird\\Touchless-Control\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-xlarge-v4\\values-xlarge-v4.xml",
+            "outputFile": "D:\\andoird\\youtube-touchless\\Touchless-Control-App\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-xlarge-v4\\values-xlarge-v4.xml",
             "map": [
                 {
                     "source": "C:\\Users\\arist\\.gradle\\caches\\transforms-3\\edc8b4993f8911add6c50a6d69cdb9f3\\transformed\\appcompat-1.2.0\\res\\values-xlarge-v4\\values-xlarge-v4.xml",

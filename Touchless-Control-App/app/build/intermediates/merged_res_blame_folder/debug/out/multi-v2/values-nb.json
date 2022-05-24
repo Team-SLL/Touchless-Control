@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\andoird\\Touchless-Control\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-nb\\values-nb.xml",
+            "outputFile": "D:\\andoird\\youtube-touchless\\Touchless-Control-App\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-nb\\values-nb.xml",
             "map": [
                 {
                     "source": "C:\\Users\\arist\\.gradle\\caches\\transforms-3\\5186dcb3a690dada06c2489615e2b64f\\transformed\\jetified-play-services-base-18.0.1\\res\\values-nb\\values.xml",

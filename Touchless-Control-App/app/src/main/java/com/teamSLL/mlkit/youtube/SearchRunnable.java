@@ -5,7 +5,7 @@ import android.util.Log;
 import com.google.api.services.youtube.YouTube;
 import com.google.api.services.youtube.model.SearchListResponse;
 import com.google.api.services.youtube.model.SearchResult;
-import com.teamSLL.mlkit.adapter.VideoInfo;
+import com.teamSLL.mlkit.screen.VideoInfo;
 
 import java.io.IOException;
 import java.util.List;
@@ -53,6 +53,7 @@ public class SearchRunnable extends YoutubeRunnable {
             videoInfos.add(new VideoInfo("", "","", "", "", null, null));
         } catch (IOException | InterruptedException e) {
             e.printStackTrace();
+            Log.e("Runnable Error",e.toString());
         }
     }
 

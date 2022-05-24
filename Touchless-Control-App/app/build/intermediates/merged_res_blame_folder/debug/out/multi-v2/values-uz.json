@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\andoird\\Touchless-Control\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-uz\\values-uz.xml",
+            "outputFile": "D:\\andoird\\youtube-touchless\\Touchless-Control-App\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-uz\\values-uz.xml",
             "map": [
                 {
                     "source": "C:\\Users\\arist\\.gradle\\caches\\transforms-3\\b061c321d5e1c59bd537eb0a5eed02ad\\transformed\\core-1.3.2\\res\\values-uz\\values-uz.xml",

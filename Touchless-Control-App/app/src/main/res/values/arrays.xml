@@ -1,44 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-  <string-array name="pref_entries_face_detector_landmark_mode">
-    <item>@string/pref_entries_face_detector_landmark_mode_no_landmarks</item>
-    <item>@string/pref_entries_face_detector_landmark_mode_all_landmarks</item>
-  </string-array>
-
-  <string-array name="pref_entry_values_face_detector_landmark_mode">
-    <item>@string/pref_entry_values_face_detector_landmark_mode_no_landmarks</item>
-    <item>@string/pref_entry_values_face_detector_landmark_mode_all_landmarks</item>
-  </string-array>
-
-  <string-array name="pref_entries_face_detector_contour_mode">
-    <item>@string/pref_entries_face_detector_contour_mode_no_contours</item>
-    <item>@string/pref_entries_face_detector_contour_mode_all_contours</item>
-  </string-array>
-
-  <string-array name="pref_entry_values_face_detector_contour_mode">
-    <item>@string/pref_entry_values_face_detector_contour_mode_no_contours</item>
-    <item>@string/pref_entry_values_face_detector_contour_mode_all_contours</item>
-  </string-array>
-
-  <string-array name="pref_entries_face_detector_classification_mode">
-    <item>@string/pref_entries_face_detector_classification_mode_no_classifications</item>
-    <item>@string/pref_entries_face_detector_classification_mode_all_classifications</item>
-  </string-array>
-
-  <string-array name="pref_entry_values_face_detector_classification_mode">
-    <item>@string/pref_entry_values_face_detector_classification_mode_no_classifications</item>
-    <item>@string/pref_entry_values_face_detector_classification_mode_all_classifications</item>
-  </string-array>
-
-  <string-array name="pref_entries_face_detector_performance_mode">
-    <item>@string/pref_entries_face_detector_performance_mode_fast</item>
-    <item>@string/pref_entries_face_detector_performance_mode_accurate</item>
-  </string-array>
-
-  <string-array name="pref_entry_values_face_detector_performance_mode">
-    <item>@string/pref_entry_values_face_detector_performance_mode_fast</item>
-    <item>@string/pref_entry_values_face_detector_performance_mode_accurate</item>
+  <string-array name="motion_array">
+    <item>선택 안함</item>
+    <item>고개 위 움직임</item>
+    <item>고개 아래 움직임</item>
+    <item>고개 왼쪽 움직임</item>
+    <item>고개 오른쪽 움직임</item>
+    <item>입 벌림</item>
+    <item>눈 깜박임</item>
   </string-array>
 
 </resources>

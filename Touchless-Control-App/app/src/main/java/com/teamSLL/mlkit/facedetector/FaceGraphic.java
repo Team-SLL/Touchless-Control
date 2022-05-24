@@ -25,8 +25,8 @@ import com.google.mlkit.vision.face.Face;
 import com.google.mlkit.vision.face.FaceContour;
 import com.google.mlkit.vision.face.FaceLandmark;
 import com.google.mlkit.vision.face.FaceLandmark.LandmarkType;
-import com.teamSLL.mlkit.source.GraphicOverlay;
-import com.teamSLL.mlkit.source.GraphicOverlay.Graphic;
+import com.teamSLL.mlkit.camera.GraphicOverlay;
+import com.teamSLL.mlkit.camera.GraphicOverlay.Graphic;
 
 import java.util.Locale;
 

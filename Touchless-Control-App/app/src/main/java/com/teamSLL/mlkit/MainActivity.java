@@ -20,18 +20,13 @@
  * */
 package com.teamSLL.mlkit;
 
-import static android.Manifest.permission_group.CAMERA;
-
 import android.Manifest;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
-import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Build.VERSION_CODES;
 import android.os.Bundle;
 import android.util.Log;
 import android.util.Size;
-import android.widget.SearchView;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -42,22 +37,19 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.camera.core.CameraSelector;
 import androidx.camera.core.ImageAnalysis;
 import androidx.camera.lifecycle.ProcessCameraProvider;
-import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.lifecycle.ViewModelProvider.AndroidViewModelFactory;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.gms.common.annotation.KeepName;
-import com.google.android.youtube.player.YouTubePlayerFragment;
 import com.google.mlkit.common.MlKitException;
+import com.teamSLL.mlkit.screen.Setting;
+import com.teamSLL.mlkit.screen.UI;
 import com.teamSLL.mlkit.facedetector.FaceDetectorProcessor;
 import com.teamSLL.mlkit.preference.PreferenceUtils;
-import com.teamSLL.mlkit.source.CameraXViewModel;
-import com.teamSLL.mlkit.source.GraphicOverlay;
-import com.teamSLL.mlkit.source.VisionImageProcessor;
-import com.teamSLL.mlkit.youtube.SearchRunnable;
+import com.teamSLL.mlkit.camera.CameraXViewModel;
+import com.teamSLL.mlkit.camera.GraphicOverlay;
+import com.teamSLL.mlkit.camera.VisionImageProcessor;
 
 import java.util.ArrayList;
 
@@ -79,13 +71,13 @@ public final class MainActivity extends AppCompatActivity {
   @Nullable private VisionImageProcessor imageProcessor;
   private boolean needUpdateGraphicOverlayImageSourceInfo;
 
+
   private String selectedModel = FACE_DETECTION;
   private int lensFacing = CameraSelector.LENS_FACING_BACK;
+
   private CameraSelector cameraSelector;
-
-  final int PERMISSION_REQUEST_CODE = 100;
-  int APIVersion = Build.VERSION.SDK_INT;
-
+  private PermissionSupport permission;
+  private Setting setting;
 
   private UI ui; // UI를 조작하는데 관여하는 클래스
 
@@ -95,130 +87,81 @@ public final class MainActivity extends AppCompatActivity {
   private ArrayList<ArrayList<Short>> motionToUI = new ArrayList<>(); // 얼굴 움직임 - UI 조작을 array list 에 넣어서 관리
 
 
-  // 카메라 권한 체크
-  private boolean checkCAMERAPermission(){
-    int result = ContextCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.CAMERA);
-    return result == PackageManager.PERMISSION_GRANTED;
-  }
-  // 카메라 권한 부여 알람창 생성
-  private void showMessagePermission(String message, DialogInterface.OnClickListener okListener){
-    new AlertDialog.Builder(this)
-            .setMessage(message)
-            .setPositiveButton("허용", okListener)
-            .setNegativeButton("거부", null)
-            .create()
-            .show();
-  }
-  @Override
-  // 카메라 권한 부여
-  public void onRequestPermissionsResult(int requestCode, @NonNull String permissions[], @NonNull int[] grantResults) {
-    switch (requestCode) {
-      case PERMISSION_REQUEST_CODE:
-        if (grantResults.length > 0) {
-          boolean cameraAccepted = (grantResults[0] == PackageManager.PERMISSION_GRANTED);
-          if (cameraAccepted) {
-            cameraSelector = new CameraSelector.Builder().requireLensFacing(lensFacing).build();
-
-            new ViewModelProvider(this, AndroidViewModelFactory.getInstance(getApplication()))
-                    .get(CameraXViewModel.class)
-                    .getProcessCameraProvider()
-                    .observe(
-                            this,
-                            provider -> {
-                              cameraProvider = provider;
-                              bindAnalysisUseCase();
-                            });
-          }else{
-            if (Build.VERSION.SDK_INT >= VERSION_CODES.M) {
-              if (shouldShowRequestPermissionRationale(CAMERA)) {
-                showMessagePermission("권한 허가를 요청합니다",
-                        new DialogInterface.OnClickListener() {
-                          @Override
-                          public void onClick(DialogInterface dialog, int which) {
-                            if (Build.VERSION.SDK_INT >= VERSION_CODES.M) {
-                              requestPermissions(new String[]{CAMERA}, PERMISSION_REQUEST_CODE);
-                            }
-                          }
-                        });
-              }
-            }
-          }
-        }
-        break;
-    }
-  }
-
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    setContentView(R.layout.activity_vision_camerax_live_preview);
+    setContentView(R.layout.main_activity);
 
     if (savedInstanceState != null) {
       selectedModel = savedInstanceState.getString(STATE_SELECTED_MODEL, FACE_DETECTION);
     }
 
-    // 카메라 권한 체크 후 권한 요구
-    if(APIVersion >= VERSION_CODES.M) {
-      if (checkCAMERAPermission()) {
-        cameraSelector = new CameraSelector.Builder().requireLensFacing(lensFacing).build();
-        new ViewModelProvider(this, AndroidViewModelFactory.getInstance(getApplication()))
-                .get(CameraXViewModel.class)
-                .getProcessCameraProvider()
-                .observe(
-                        this,
-                        provider -> {
-                          cameraProvider = provider;
-                          bindAnalysisUseCase();
-                        });
-      }else{
-        ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CAMERA}, PERMISSION_REQUEST_CODE);
-      }
-    }
-    
+    permissionCheck();
+
+    setting = new Setting(this, getApplicationContext());
+
     initUI();
   }
-  
+
+
+
+  private void initCamera(){
+    cameraSelector = new CameraSelector.Builder().requireLensFacing(lensFacing).build();
+    new ViewModelProvider(this, AndroidViewModelFactory.getInstance(getApplication()))
+            .get(CameraXViewModel.class)
+            .getProcessCameraProvider()
+            .observe(
+                    this,
+                    provider -> {
+                      cameraProvider = provider;
+                      bindAnalysisUseCase();
+                    });
+  }
+
+  private void initMic(){
+
+  }
+
+  private void permissionCheck() {
+    permission = new PermissionSupport(this, this);
+
+    if (!permission.checkPermission()){
+      permission.requestPermission();
+    }
+
+    if(Build.VERSION.SDK_INT >= VERSION_CODES.M) {
+      if(permission.checkPermission(Manifest.permission.RECORD_AUDIO)){
+        initMic();
+      }
+      if (permission.checkPermission(Manifest.permission.CAMERA)) {
+        initCamera();
+      }
+    }
+  }
+  // Request Permission에 대한 결과 값 받아와
+  @Override
+  public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+    //여기서도 리턴이 false로 들어온다면 (사용자가 권한 허용 거부)
+    if (!permission.permissionResult(requestCode, permissions, grantResults)) {
+      // 다시 permission 요청
+      permission.requestPermission();
+    }
+    super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+
+    initCamera();
+    initMic();
+  }
+
+
   // layout Init
   private void initUI() {
-    // IF IN MAIN SCREEN
-    ArrayList<Short> mainScreen = new ArrayList<>();
-    mainScreen.add(UI.NONE);        // NONE - NONE
-    mainScreen.add(UI.VIDEO_START); // TOP - VIDEO START
-    mainScreen.add(UI.NONE);        // DOWN - NONE
-    mainScreen.add(UI.PREV_VIDEO);  // LEFT - PREV VIDEO
-    mainScreen.add(UI.NEXT_VIDEO);  // RIGHT - NEXT VIDEO
-    mainScreen.add(UI.SEARCH);      // MOUTH OPEN - SEARCH OPEN
-    mainScreen.add(UI.NONE);        // EYE CLOSED SHORT - NONE
-    mainScreen.add(UI.NONE);        // EYE CLOSED LONG - NONE
-    motionToUI.add(mainScreen);
+    motionToUI = setting.getSetting();
 
-    // IF IN VIDEO PLAYING SCREEN
-    ArrayList<Short> videoScreen = new ArrayList<>();
-    videoScreen.add(UI.NONE);             // NONE - NONE
-    videoScreen.add(UI.NONE);             // TOP - NONE
-    videoScreen.add(UI.VIDEO_END);        // DOWN - VIDEO END
-    videoScreen.add(UI.NONE);             // LEFT - NONE
-    videoScreen.add(UI.NONE);             // RIGHT - NONE
-    videoScreen.add(UI.NONE);             // MOUTH OPEN - NONE
-    videoScreen.add(UI.VIDEO_PLAY_STOP);  // EYE CLOSED SHORT - VIDEO PLAY OR STOP
-    videoScreen.add(UI.NONE);             // EYE CLOSED LONG - NONE
-    motionToUI.add(videoScreen);
-
-
-    SearchView searchView = findViewById(R.id.search_view);
     tv = findViewById(R.id.textView); //현재 얼굴인식 결과 : 테스트용
     graphicOverlay = findViewById(R.id.graphic_overlay);
 
-    // 영상 리스트뷰 셋팅
-    RecyclerView recyclerView = findViewById(R.id.rvVideos); // 영상 목록을 담을 recycler view
-    recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
-    LinearLayoutManager manager = (LinearLayoutManager) recyclerView.getLayoutManager();
-
-    // 유튜브 영상을 재생할 프레그먼트
-    YouTubePlayerFragment youTubePlayerFragment = (YouTubePlayerFragment) getFragmentManager().findFragmentById(R.id.youtube_player_fragment); //유튜브 재생 프래그먼트, 유튜브 영상 재생용
-
     // UI를 전반적으로 제어하는 클래스 생성
-    ui = new UI(getApplicationContext(), recyclerView, manager, youTubePlayerFragment, searchView);
+    ui = new UI(this, getApplicationContext());
   }
 
 
@@ -248,6 +191,7 @@ public final class MainActivity extends AppCompatActivity {
     if (imageProcessor != null) {
       imageProcessor.stop();
     }
+  //  speechRecognizer.destroy();
   }
 
   private void bindAnalysisUseCase() {
@@ -279,15 +223,16 @@ public final class MainActivity extends AppCompatActivity {
             // thus we can just runs the analyzer itself on main thread.
             ContextCompat.getMainExecutor(this),
             imageProxy -> {
+
               if (needUpdateGraphicOverlayImageSourceInfo) {
-                boolean isImageFlipped = lensFacing == CameraSelector.LENS_FACING_BACK;
+                //boolean isImageFlipped = lensFacing == CameraSelector.LENS_FACING_BACK;
                 int rotationDegrees = imageProxy.getImageInfo().getRotationDegrees();
                 if (rotationDegrees == 0 || rotationDegrees == 180) {
                   graphicOverlay.setImageSourceInfo(
-                          imageProxy.getWidth(), imageProxy.getHeight(), isImageFlipped);
+                          imageProxy.getWidth(), imageProxy.getHeight(), true);
                 } else {
                   graphicOverlay.setImageSourceInfo(
-                          imageProxy.getHeight(), imageProxy.getWidth(), isImageFlipped);
+                          imageProxy.getHeight(), imageProxy.getWidth(), true);
                 }
                 needUpdateGraphicOverlayImageSourceInfo = false;
               }
@@ -295,10 +240,16 @@ public final class MainActivity extends AppCompatActivity {
                 //이미지 분석
                 imageProcessor.processImageProxy(imageProxy, graphicOverlay);
 
+                if(ui.isSettingOpen()) return;
+
                 //분석 결과에 대해 이용
                 int result = ((FaceDetectorProcessor)imageProcessor).getFaceMoveEvent();
                 // 얼굴 움직임 결과에 따라 UI 조작
-                ui.use(motionToUI.get(ui.isFullScreen?1:0).get(result));
+
+                InputMethodManager imm = (InputMethodManager) getSystemService(this.INPUT_METHOD_SERVICE);
+
+                int screen = ui.isFullScreen ? 1 : (imm.isFullscreenMode() ? 2 : 0);
+                ui.use(motionToUI.get(screen).get(result));
                 tv.setText(Integer.toString(result));
 
 
@@ -312,16 +263,9 @@ public final class MainActivity extends AppCompatActivity {
     cameraProvider.bindToLifecycle(/* lifecycleOwner= */ this, cameraSelector, analysisUseCase);
   }
 
-  public void changeMotionToUI(int where, int selected_motion, short change_ui){
-    ArrayList<Short> temp = motionToUI.get(where);
-    temp.set(selected_motion, change_ui);
-    motionToUI.set(where, temp);
-    temp.clear();
-  }
-
   @Override
   public void onBackPressed() { //뒤로가기
-    if (!ui.isSearchViewIconified()) {
+    if (ui.isSearchViewOpened()) {
       ui.closeSearchView();
       return;
     }
@@ -329,6 +273,12 @@ public final class MainActivity extends AppCompatActivity {
       ui.use(UI.VIDEO_END);
       return;
     }
+    if(ui.isSettingOpen()){
+      ui.closeSetting();
+      motionToUI = setting.getSetting();
+      return;
+    }
     super.onBackPressed();
   }
+
 }

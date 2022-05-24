@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\andoird\Touchless-Control\app\src\main\AndroidManifest.xml:2:1-65:12
-INJECTED from D:\andoird\Touchless-Control\app\src\main\AndroidManifest.xml:2:1-65:12
-INJECTED from D:\andoird\Touchless-Control\app\src\main\AndroidManifest.xml:2:1-65:12
-INJECTED from D:\andoird\Touchless-Control\app\src\main\AndroidManifest.xml:2:1-65:12
+ADDED from D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:2:1-72:12
+INJECTED from D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:2:1-72:12
+INJECTED from D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:2:1-72:12
+INJECTED from D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:2:1-72:12
 MERGED from [androidx.multidex:multidex:2.0.1] C:\Users\arist\.gradle\caches\transforms-3\0ca717fc96bd5815607295b0ac14914f\transformed\multidex-2.0.1\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.mlkit:face-detection:16.1.5] C:\Users\arist\.gradle\caches\transforms-3\431ed42eae6a2a2fc4dc92c2e8b5a6d1\transformed\jetified-face-detection-16.1.5\AndroidManifest.xml:2:1-8:12
 MERGED from [androidx.recyclerview:recyclerview:1.2.1] C:\Users\arist\.gradle\caches\transforms-3\2966ed93a8124247cbaeb83b6def5679\transformed\recyclerview-1.2.1\AndroidManifest.xml:17:1-24:12
@@ -49,31 +49,31 @@ MERGED from [androidx.exifinterface:exifinterface:1.0.0] C:\Users\arist\.gradle\
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\arist\.gradle\caches\transforms-3\8cd25fb4f2f9f2997a87c5ec3e25d1b3\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.android.odml:image:1.0.0-beta1] C:\Users\arist\.gradle\caches\transforms-3\4dee881b437e192e05a206eadb2710b2\transformed\jetified-image-1.0.0-beta1\AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.annotation:annotation-experimental:1.0.0-rc01] C:\Users\arist\.gradle\caches\transforms-3\dcf286bcdeaffa986834af04a50fb1ed\transformed\jetified-annotation-experimental-1.0.0-rc01\AndroidManifest.xml:17:1-24:12
-INJECTED from D:\andoird\Touchless-Control\app\src\main\AndroidManifest.xml:2:1-65:12
-INJECTED from D:\andoird\Touchless-Control\app\src\main\AndroidManifest.xml:2:1-65:12
-INJECTED from D:\andoird\Touchless-Control\app\src\main\AndroidManifest.xml:2:1-65:12
+INJECTED from D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:2:1-72:12
+INJECTED from D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:2:1-72:12
+INJECTED from D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:2:1-72:12
 	package
-		ADDED from D:\andoird\Touchless-Control\app\src\main\AndroidManifest.xml:5:5-32
-		INJECTED from D:\andoird\Touchless-Control\app\src\main\AndroidManifest.xml
-		INJECTED from D:\andoird\Touchless-Control\app\src\main\AndroidManifest.xml
+		ADDED from D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:5:5-32
+		INJECTED from D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml
+		INJECTED from D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from D:\andoird\Touchless-Control\app\src\main\AndroidManifest.xml
-		ADDED from D:\andoird\Touchless-Control\app\src\main\AndroidManifest.xml:2:1-65:12
-		INJECTED from D:\andoird\Touchless-Control\app\src\main\AndroidManifest.xml
+		INJECTED from D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml
+		ADDED from D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:2:1-72:12
+		INJECTED from D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml
 	xmlns:tools
-		ADDED from D:\andoird\Touchless-Control\app\src\main\AndroidManifest.xml:4:5-51
+		ADDED from D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:4:5-51
 	android:versionCode
-		INJECTED from D:\andoird\Touchless-Control\app\src\main\AndroidManifest.xml
-		ADDED from D:\andoird\Touchless-Control\app\src\main\AndroidManifest.xml:2:1-65:12
-		INJECTED from D:\andoird\Touchless-Control\app\src\main\AndroidManifest.xml
+		INJECTED from D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml
+		ADDED from D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:2:1-72:12
+		INJECTED from D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from D:\andoird\Touchless-Control\app\src\main\AndroidManifest.xml:3:5-63
+		ADDED from D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:3:5-63
 	android:installLocation
-		ADDED from D:\andoird\Touchless-Control\app\src\main\AndroidManifest.xml:6:5-35
+		ADDED from D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:6:5-35
 uses-sdk
-ADDED from D:\andoird\Touchless-Control\app\src\main\AndroidManifest.xml:13:5-16:63
-INJECTED from D:\andoird\Touchless-Control\app\src\main\AndroidManifest.xml:13:5-16:63
-INJECTED from D:\andoird\Touchless-Control\app\src\main\AndroidManifest.xml:13:5-16:63
+ADDED from D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:13:5-16:63
+INJECTED from D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:13:5-16:63
+INJECTED from D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:13:5-16:63
 MERGED from [androidx.multidex:multidex:2.0.1] C:\Users\arist\.gradle\caches\transforms-3\0ca717fc96bd5815607295b0ac14914f\transformed\multidex-2.0.1\AndroidManifest.xml:20:5-43
 MERGED from [androidx.multidex:multidex:2.0.1] C:\Users\arist\.gradle\caches\transforms-3\0ca717fc96bd5815607295b0ac14914f\transformed\multidex-2.0.1\AndroidManifest.xml:20:5-43
 MERGED from [com.google.mlkit:face-detection:16.1.5] C:\Users\arist\.gradle\caches\transforms-3\431ed42eae6a2a2fc4dc92c2e8b5a6d1\transformed\jetified-face-detection-16.1.5\AndroidManifest.xml:6:5-44
@@ -164,44 +164,52 @@ MERGED from [com.google.android.odml:image:1.0.0-beta1] C:\Users\arist\.gradle\c
 MERGED from [com.google.android.odml:image:1.0.0-beta1] C:\Users\arist\.gradle\caches\transforms-3\4dee881b437e192e05a206eadb2710b2\transformed\jetified-image-1.0.0-beta1\AndroidManifest.xml:5:5-44
 MERGED from [androidx.annotation:annotation-experimental:1.0.0-rc01] C:\Users\arist\.gradle\caches\transforms-3\dcf286bcdeaffa986834af04a50fb1ed\transformed\jetified-annotation-experimental-1.0.0-rc01\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.annotation:annotation-experimental:1.0.0-rc01] C:\Users\arist\.gradle\caches\transforms-3\dcf286bcdeaffa986834af04a50fb1ed\transformed\jetified-annotation-experimental-1.0.0-rc01\AndroidManifest.xml:20:5-22:41
-INJECTED from D:\andoird\Touchless-Control\app\src\main\AndroidManifest.xml:13:5-16:63
-INJECTED from D:\andoird\Touchless-Control\app\src\main\AndroidManifest.xml:13:5-16:63
+INJECTED from D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:13:5-16:63
+INJECTED from D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:13:5-16:63
 	tools:overrideLibrary
-		ADDED from D:\andoird\Touchless-Control\app\src\main\AndroidManifest.xml:13:5-16:63
+		ADDED from D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:13:5-16:63
 	android:targetSdkVersion
-		INJECTED from D:\andoird\Touchless-Control\app\src\main\AndroidManifest.xml
-		ADDED from D:\andoird\Touchless-Control\app\src\main\AndroidManifest.xml:13:5-16:63
-		INJECTED from D:\andoird\Touchless-Control\app\src\main\AndroidManifest.xml
+		INJECTED from D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml
+		ADDED from D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:13:5-16:63
+		INJECTED from D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from D:\andoird\Touchless-Control\app\src\main\AndroidManifest.xml
-		ADDED from D:\andoird\Touchless-Control\app\src\main\AndroidManifest.xml:13:5-16:63
-		INJECTED from D:\andoird\Touchless-Control\app\src\main\AndroidManifest.xml
+		INJECTED from D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml
+		ADDED from D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:13:5-16:63
+		INJECTED from D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml
 uses-feature#android.hardware.camera
-ADDED from D:\andoird\Touchless-Control\app\src\main\AndroidManifest.xml:18:5-59
+ADDED from D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:18:5-59
 	android:name
-		ADDED from D:\andoird\Touchless-Control\app\src\main\AndroidManifest.xml:18:19-57
+		ADDED from D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:18:19-57
 uses-permission#android.permission.INTERNET
-ADDED from D:\andoird\Touchless-Control\app\src\main\AndroidManifest.xml:20:5-66
+ADDED from D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:20:5-66
 MERGED from [kr.co.prnd:youtube-player-view:1.3.0] C:\Users\arist\.gradle\caches\transforms-3\5d8f1233364499bbd9ea598f2fa022fb\transformed\jetified-youtube-player-view-1.3.0\AndroidManifest.xml:9:5-67
 MERGED from [kr.co.prnd:youtube-player-view:1.3.0] C:\Users\arist\.gradle\caches\transforms-3\5d8f1233364499bbd9ea598f2fa022fb\transformed\jetified-youtube-player-view-1.3.0\AndroidManifest.xml:9:5-67
 MERGED from [com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\arist\.gradle\caches\transforms-3\08c4cef49f7a1ad6ec74d8908dd2c993\transformed\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:26:5-67
 MERGED from [com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\arist\.gradle\caches\transforms-3\08c4cef49f7a1ad6ec74d8908dd2c993\transformed\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:26:5-67
 	android:name
-		ADDED from D:\andoird\Touchless-Control\app\src\main\AndroidManifest.xml:20:22-64
+		ADDED from D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:20:22-64
+uses-permission#android.permission.MICROPHONE
+ADDED from D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:21:5-69
+	android:name
+		ADDED from D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:21:22-66
+uses-permission#android.permission.RECORD_AUDIO
+ADDED from D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:22:5-71
+	android:name
+		ADDED from D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:22:22-68
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from D:\andoird\Touchless-Control\app\src\main\AndroidManifest.xml:21:5-80
+ADDED from D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:23:5-80
 	android:name
-		ADDED from D:\andoird\Touchless-Control\app\src\main\AndroidManifest.xml:21:22-78
+		ADDED from D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:23:22-78
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from D:\andoird\Touchless-Control\app\src\main\AndroidManifest.xml:22:5-79
+ADDED from D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:24:5-79
 	android:name
-		ADDED from D:\andoird\Touchless-Control\app\src\main\AndroidManifest.xml:22:22-77
+		ADDED from D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:24:22-77
 uses-permission#android.permission.CAMERA
-ADDED from D:\andoird\Touchless-Control\app\src\main\AndroidManifest.xml:23:5-64
+ADDED from D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:25:5-64
 	android:name
-		ADDED from D:\andoird\Touchless-Control\app\src\main\AndroidManifest.xml:23:22-62
+		ADDED from D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:25:22-62
 application
-ADDED from D:\andoird\Touchless-Control\app\src\main\AndroidManifest.xml:25:5-54:19
+ADDED from D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:27:5-56:19
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\arist\.gradle\caches\transforms-3\d7d6f1a36ea57204913deb944fe02159\transformed\constraintlayout-2.0.4\AndroidManifest.xml:9:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\arist\.gradle\caches\transforms-3\d7d6f1a36ea57204913deb944fe02159\transformed\constraintlayout-2.0.4\AndroidManifest.xml:9:5-20
 MERGED from [com.google.android.gms:play-services-mlkit-face-detection:17.0.1] C:\Users\arist\.gradle\caches\transforms-3\b4466e5a88d217bd33b6c95da812ccbb\transformed\jetified-play-services-mlkit-face-detection-17.0.1\AndroidManifest.xml:8:5-16:19
@@ -229,61 +237,67 @@ MERGED from [com.google.android.odml:image:1.0.0-beta1] C:\Users\arist\.gradle\c
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.3.2] C:\Users\arist\.gradle\caches\transforms-3\b061c321d5e1c59bd537eb0a5eed02ad\transformed\core-1.3.2\AndroidManifest.xml:24:18-86
 	android:label
-		ADDED from D:\andoird\Touchless-Control\app\src\main\AndroidManifest.xml:28:9-41
+		ADDED from D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:30:9-41
 	android:icon
-		ADDED from D:\andoird\Touchless-Control\app\src\main\AndroidManifest.xml:27:9-44
+		ADDED from D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:29:9-44
 	android:theme
-		ADDED from D:\andoird\Touchless-Control\app\src\main\AndroidManifest.xml:30:9-65
+		ADDED from D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:32:9-65
 	android:usesCleartextTraffic
-		ADDED from D:\andoird\Touchless-Control\app\src\main\AndroidManifest.xml:29:9-44
+		ADDED from D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:31:9-44
 	android:name
-		ADDED from D:\andoird\Touchless-Control\app\src\main\AndroidManifest.xml:26:9-61
+		ADDED from D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:28:9-61
 meta-data#com.teamSLL.android.gms.version
-ADDED from D:\andoird\Touchless-Control\app\src\main\AndroidManifest.xml:32:9-34:68
+ADDED from D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:34:9-36:68
 	android:value
-		ADDED from D:\andoird\Touchless-Control\app\src\main\AndroidManifest.xml:34:13-66
+		ADDED from D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:36:13-66
 	android:name
-		ADDED from D:\andoird\Touchless-Control\app\src\main\AndroidManifest.xml:33:13-59
+		ADDED from D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:35:13-59
 meta-data#com.teamSLL.mlkit.DEPENDENCIES
-ADDED from D:\andoird\Touchless-Control\app\src\main\AndroidManifest.xml:38:9-40:62
+ADDED from D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:40:9-42:62
 	android:value
-		ADDED from D:\andoird\Touchless-Control\app\src\main\AndroidManifest.xml:40:13-60
+		ADDED from D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:42:13-60
 	android:name
-		ADDED from D:\andoird\Touchless-Control\app\src\main\AndroidManifest.xml:39:13-58
+		ADDED from D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:41:13-58
 activity#com.teamSLL.mlkit.MainActivity
-ADDED from D:\andoird\Touchless-Control\app\src\main\AndroidManifest.xml:43:9-52:20
+ADDED from D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:45:9-54:20
 	android:screenOrientation
-		ADDED from D:\andoird\Touchless-Control\app\src\main\AndroidManifest.xml:46:13-50
+		ADDED from D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:48:13-50
 	android:exported
-		ADDED from D:\andoird\Touchless-Control\app\src\main\AndroidManifest.xml:45:13-36
+		ADDED from D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:47:13-36
 	android:theme
-		ADDED from D:\andoird\Touchless-Control\app\src\main\AndroidManifest.xml:47:13-69
+		ADDED from D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:49:13-69
 	android:name
-		ADDED from D:\andoird\Touchless-Control\app\src\main\AndroidManifest.xml:44:13-58
+		ADDED from D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:46:13-58
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from D:\andoird\Touchless-Control\app\src\main\AndroidManifest.xml:48:13-51:29
+ADDED from D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:50:13-53:29
 action#android.intent.action.MAIN
-ADDED from D:\andoird\Touchless-Control\app\src\main\AndroidManifest.xml:49:17-68
+ADDED from D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:51:17-68
 	android:name
-		ADDED from D:\andoird\Touchless-Control\app\src\main\AndroidManifest.xml:49:25-66
+		ADDED from D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:51:25-66
 category#android.intent.category.LAUNCHER
-ADDED from D:\andoird\Touchless-Control\app\src\main\AndroidManifest.xml:50:17-76
+ADDED from D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:52:17-76
 	android:name
-		ADDED from D:\andoird\Touchless-Control\app\src\main\AndroidManifest.xml:50:27-74
+		ADDED from D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:52:27-74
 queries
-ADDED from D:\andoird\Touchless-Control\app\src\main\AndroidManifest.xml:55:5-59:15
+ADDED from D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:57:5-61:15
 intent#action:name:android.media.action.IMAGE_CAPTURE
-ADDED from D:\andoird\Touchless-Control\app\src\main\AndroidManifest.xml:56:9-58:18
+ADDED from D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:58:9-60:18
 action#android.media.action.IMAGE_CAPTURE
-ADDED from D:\andoird\Touchless-Control\app\src\main\AndroidManifest.xml:57:13-73
+ADDED from D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:59:13-73
 	android:name
-		ADDED from D:\andoird\Touchless-Control\app\src\main\AndroidManifest.xml:57:21-70
+		ADDED from D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:59:21-70
 intent#action:name:com.google.android.youtube.api.service.START
-ADDED from D:\andoird\Touchless-Control\app\src\main\AndroidManifest.xml:61:5-63:14
+ADDED from D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:63:5-65:14
 action#com.google.android.youtube.api.service.START
-ADDED from D:\andoird\Touchless-Control\app\src\main\AndroidManifest.xml:62:9-79
+ADDED from D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:64:9-79
 	android:name
-		ADDED from D:\andoird\Touchless-Control\app\src\main\AndroidManifest.xml:62:17-76
+		ADDED from D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:64:17-76
+intent#action:name:android.speech.RecognitionService
+ADDED from D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:68:9-70:18
+action#android.speech.RecognitionService
+ADDED from D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:69:13-72
+	android:name
+		ADDED from D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:69:21-69
 service#com.google.mlkit.common.internal.MlKitComponentDiscoveryService
 ADDED from [com.google.android.gms:play-services-mlkit-face-detection:17.0.1] C:\Users\arist\.gradle\caches\transforms-3\b4466e5a88d217bd33b6c95da812ccbb\transformed\jetified-play-services-mlkit-face-detection-17.0.1\AndroidManifest.xml:9:9-15:19
 MERGED from [com.google.mlkit:vision-common:17.1.0] C:\Users\arist\.gradle\caches\transforms-3\575f420090490103ff6ba0d25b0a3578\transformed\jetified-vision-common-17.1.0\AndroidManifest.xml:9:9-15:19

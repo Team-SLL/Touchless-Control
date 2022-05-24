@@ -35,7 +35,7 @@ import com.google.mlkit.vision.face.FaceDetector;
 import com.google.mlkit.vision.face.FaceDetectorOptions;
 import com.google.mlkit.vision.face.FaceLandmark;
 import com.teamSLL.mlkit.VisionProcessorBase;
-import com.teamSLL.mlkit.source.GraphicOverlay;
+import com.teamSLL.mlkit.camera.GraphicOverlay;
 
 import java.util.List;
 import java.util.Locale;

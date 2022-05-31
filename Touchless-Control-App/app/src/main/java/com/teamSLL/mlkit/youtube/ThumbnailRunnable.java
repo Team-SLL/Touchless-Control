@@ -10,8 +10,7 @@ public class ThumbnailRunnable extends YoutubeRunnable {
     private String channelID;
     private String channelThumbnail;
 
-    public ThumbnailRunnable(String KEY, String channelID){
-        super(KEY);
+    public ThumbnailRunnable(String channelID){
         this.channelID = channelID;
     }
 

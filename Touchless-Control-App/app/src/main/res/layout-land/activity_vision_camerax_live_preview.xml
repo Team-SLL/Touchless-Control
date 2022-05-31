@@ -1,77 +1,194 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="#FFFFFF">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-  <LinearLayout
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_alignParentBottom="true"
-      android:layout_marginLeft="0dp"
-      android:layout_marginBottom="0dp"
-      android:orientation="horizontal"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.0"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent"
-      app:layout_constraintVertical_bias="1.0">
-
-    <com.teamSLL.mlkit.camera.GraphicOverlay
-        android:id="@+id/graphic_overlay"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:visibility="visible" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:text="TextView"
-        android:textColor="@android:color/black"
-        android:textSize="30sp" />
-
-  </LinearLayout>
 
   <LinearLayout
       android:id="@+id/linearLayout"
       android:layout_width="match_parent"
       android:layout_height="match_parent"
-      android:orientation="vertical">
+      android:orientation="horizontal"
+      android:background="@color/backwhite">
+    <FrameLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:weightSum="7">
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:orientation="horizontal">
 
-      <SearchView
-          android:id="@+id/search_view"
-          android:layout_width="300dp"
-          android:layout_height="40dp"
-          android:iconifiedByDefault="false"
-          app:searchIcon="@drawable/ic_search">
+        <LinearLayout
+            android:layout_width="49dp"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:background="@drawable/round_menu"
+            android:orientation="vertical"
+            android:paddingLeft="5dp"
+            android:paddingTop="10dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="10dp">
+          <Space
+              android:layout_width="0dp"
+              android:layout_height="0dp"
+              android:layout_weight="1"/>
+          <ImageButton
+              android:id="@+id/home_button"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
+              android:layout_margin="5dp"
+              android:background="@drawable/round_button_click"
+              android:padding="5dp"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toTopOf="parent"
+              app:srcCompat="@drawable/ic_home" />
+          <Space
+              android:layout_width="0dp"
+              android:layout_height="0dp"
+              android:layout_weight="1"/>
+          <ImageButton
+              android:id="@+id/search_button"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
+              android:layout_margin="5dp"
+              android:background="@drawable/round_button"
+              android:padding="5dp"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toTopOf="parent"
+              app:srcCompat="@drawable/ic_search" />
+          <Space
+              android:layout_width="0dp"
+              android:layout_height="0dp"
+              android:layout_weight="1"/>
+          <LinearLayout
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center">
 
-      </SearchView>
-      <Button
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          app:layout_constraintLeft_toLeftOf="parent"
-          app:layout_constraintTop_toTopOf="parent"
-          android:text="Open"
-          android:id="@+id/setting_button" />
-    </LinearLayout>
+            <ImageButton
+                android:id="@+id/micoff_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/round_button"
+                android:padding="5dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_mic_off" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvVideos"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+            <ImageButton
+                android:id="@+id/micon_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/round_button_click"
+                android:padding="5dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_mic_on" />
+          </LinearLayout>
 
-    </androidx.recyclerview.widget.RecyclerView>
+          <!--      <Button-->
+          <!--          android:id="@+id/setting_button"-->
+          <!--          android:layout_width="wrap_content"-->
+          <!--          android:layout_height="40dp"-->
+          <!--          android:text="Open"-->
+          <!--          android:textColor="@color/backwhite"-->
+          <!--          app:layout_constraintLeft_toLeftOf="parent"-->
+          <!--          app:layout_constraintTop_toTopOf="parent"-->
+          <!--          android:background="@drawable/round_button"-->
+          <!--          android:layout_margin="5dp"-->
+          <!--          android:fontFamily="@font/nexonlv1bold"/>-->
+          <Space
+              android:layout_width="0dp"
+              android:layout_height="0dp"
+              android:layout_weight="1"/>
+
+          <ImageButton
+              android:id="@+id/setting_button"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
+              android:layout_margin="5dp"
+              android:background="@drawable/round_button"
+              android:padding="5dp"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toTopOf="parent"
+              app:srcCompat="@drawable/ic_settings"
+              tools:ignore="TouchTargetSizeCheck" />
+          <Space
+              android:layout_width="0dp"
+              android:layout_height="0dp"
+              android:layout_weight="1"/>
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="3dp"
+            android:background="@drawable/round_left"
+            android:orientation="vertical">
+
+          <androidx.recyclerview.widget.RecyclerView
+              android:id="@+id/rvVideos"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
+              app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"></androidx.recyclerview.widget.RecyclerView>
+
+          <SearchView
+              android:id="@+id/search_view"
+              android:layout_width="300dp"
+              android:layout_height="40dp"
+              android:layout_marginTop="20dp"
+              android:background="@drawable/round_search"
+              android:fontFamily="@font/nexonlv1regular"
+              android:iconifiedByDefault="false"
+              android:queryBackground="@null"
+              app:searchIcon="@drawable/ic_search">
+
+          </SearchView>
+
+          <LinearLayout
+              android:layout_width="180dp"
+              android:layout_height="180dp"
+              android:layout_marginStart="100dp"
+              android:layout_marginLeft="0dp"
+              android:layout_marginTop="230dp"
+              android:layout_marginEnd="531dp"
+              android:layout_marginBottom="11dp"
+              android:gravity="center">
+
+            <com.teamSLL.mlkit.camera.GraphicOverlay
+                android:id="@+id/graphic_overlay"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@android:color/black"
+                android:textSize="30sp" />
+          </LinearLayout>
+
+
+        </FrameLayout>
+
+      </LinearLayout>
+
+    </FrameLayout>
+
+
+
 
     <fragment
         android:id="@+id/youtube_player_fragment"

@@ -18,12 +18,12 @@ public class YoutubeRunnable implements Runnable{
     private static final HttpTransport HTTP_TRANSPORT = new NetHttpTransport();
     private static final JsonFactory JSON_FACTORY = new GsonFactory();
     protected YouTube youtube;
-    protected String KEY;
+    public static final String KEY = "AIzaSyClXQPS7Ex7AGY7l3JCKVwe6er1lA5wj8E";
     protected ArrayList<VideoInfo> videoInfos = new ArrayList<>();
+    protected String nextVideoToken = "";
 
 
-    public YoutubeRunnable(String KEY){
-        this.KEY = KEY;
+    public YoutubeRunnable(){
         this.youtube = new YouTube.Builder(HTTP_TRANSPORT, JSON_FACTORY, new HttpRequestInitializer() {
             public void initialize(HttpRequest request) throws IOException {}
         }).setApplicationName("youtube-touchless").build();
@@ -37,4 +37,5 @@ public class YoutubeRunnable implements Runnable{
     public ArrayList<VideoInfo> getVideoInfos(){
         return this.videoInfos;
     }
+    public String getNextVideoToken() {return this.nextVideoToken;}
 }

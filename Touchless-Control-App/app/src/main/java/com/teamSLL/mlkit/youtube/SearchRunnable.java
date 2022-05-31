@@ -11,18 +11,16 @@ import java.io.IOException;
 import java.util.List;
 
 public class SearchRunnable extends YoutubeRunnable {
-    private int MAX_LEN; // Quota = 100 + MAX_LEN*2
+    private int MAX_LEN = 3; // Quota = 100 + MAX_LEN*2
     private String keyword;
+    private String nextToken = "";
 
-    public SearchRunnable(String KEY, String keyword){
-        super(KEY);
-        this.MAX_LEN = 5;
+    public SearchRunnable(String keyword){
         this.keyword = keyword;
     }
-    public SearchRunnable(String KEY, String keyword, int MAX_LEN){
-        super(KEY);
-        this.MAX_LEN = MAX_LEN;
+    public SearchRunnable(String keyword, String nextToken){
         this.keyword = keyword;
+        this.nextToken = nextToken;
     }
 
     public void run(){
@@ -32,25 +30,25 @@ public class SearchRunnable extends YoutubeRunnable {
 
             search.setQ(keyword);
             search.setType("video");
-            search.setFields("items(id/videoId)");
             search.setMaxResults((long) MAX_LEN);
             search.setKey(KEY);
+            if(nextToken != "")
+                search.setPageToken(nextToken);
 
-            SearchListResponse searchResponse = search.execute();
-            List<SearchResult> searchResultList = searchResponse.getItems();
+            SearchListResponse response = search.execute();
+            List<SearchResult> searchResultList = response.getItems();
+            this.nextVideoToken = response.getNextPageToken();
 
             videoInfos.clear();
-            videoInfos.add(new VideoInfo("", "","", "", "", null, null));
             for (int i = 0; i < searchResultList.size(); i++) {
                 String videoID = searchResultList.get(i).getId().getVideoId();
 
-                VideoRunnable getVideoRunnable = new VideoRunnable(KEY, videoID);
+                VideoRunnable getVideoRunnable = new VideoRunnable(videoID);
                 Thread thread = new Thread(getVideoRunnable);
                 thread.start();
                 thread.join();
                 videoInfos.add(getVideoRunnable.getVideoInfo());
             }
-            videoInfos.add(new VideoInfo("", "","", "", "", null, null));
         } catch (IOException | InterruptedException e) {
             e.printStackTrace();
             Log.e("Runnable Error",e.toString());

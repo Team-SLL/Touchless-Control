@@ -15,15 +15,13 @@ import java.math.BigInteger;
 import java.util.List;
 
 public class PopularRunnable extends YoutubeRunnable {
-    private int MAX_LEN; // Quota = 1 + MAX_LEN
+    private int MAX_LEN = 3; // Quota = 1 + MAX_LEN
+    private String nextToken = "";
 
-    public PopularRunnable(String KEY){
-        super(KEY);
-        this.MAX_LEN = 5;
+    public PopularRunnable(){
     }
-    public PopularRunnable(String KEY, int MAX_LEN){
-        super(KEY);
-        this.MAX_LEN = MAX_LEN;
+    public PopularRunnable(String nextToken){
+        this.nextToken = nextToken;
     }
 
     public void run(){
@@ -31,16 +29,19 @@ public class PopularRunnable extends YoutubeRunnable {
         try {
             popular = youtube.videos().list("id,snippet,statistics");
 
-            popular.setFields("items");
             popular.setChart("mostPopular");
             popular.setMaxResults((long) MAX_LEN);
             popular.setRegionCode("kr");
             popular.setKey(KEY);
+            if(nextToken != "")
+                popular.setPageToken(nextToken);
+
             VideoListResponse response = popular.execute();
             List<Video> resultList = response.getItems();
-            videoInfos.clear();
-            videoInfos.add(new VideoInfo("", "","", "", "", null, null));
 
+
+            this.nextVideoToken = response.getNextPageToken();
+            videoInfos.clear();
             for (int i = 0; i < resultList.size(); i++) {
                 Video result = resultList.get(i);
 
@@ -48,16 +49,15 @@ public class PopularRunnable extends YoutubeRunnable {
                 VideoStatistics statistics = result.getStatistics();
 
                 String videoID = result.getId();
+                String videoTitle = snippet.getTitle();
 
                 String channelID = snippet.getChannelId();
                 String channelTitle = snippet.getChannelTitle();
 
                 DateTime uploadedTime = snippet.getPublishedAt();
-                String videoTitle = snippet.getTitle();
-
                 BigInteger views = statistics.getViewCount();
-                Log.i("UPDATE_UI",videoTitle);
-                ThumbnailRunnable getThumbnail = new ThumbnailRunnable(KEY, channelID);
+
+                ThumbnailRunnable getThumbnail = new ThumbnailRunnable(channelID);
                 Thread thread = new Thread(getThumbnail);
                 thread.start();
                 thread.join();
@@ -65,7 +65,6 @@ public class PopularRunnable extends YoutubeRunnable {
 
                 videoInfos.add(new VideoInfo(videoID, videoTitle, channelID, channelTitle, channelThumbnail, uploadedTime, views));
             }
-            videoInfos.add(new VideoInfo("", "","", "", "", null, null));
         } catch (IOException | InterruptedException e) {
             e.printStackTrace();
             Log.e("Runnable Error",e.toString());

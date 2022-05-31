@@ -16,8 +16,7 @@ public class VideoRunnable extends YoutubeRunnable {
     private String videoID;
     private VideoInfo videoInfo;
 
-    public VideoRunnable(String KEY, String videoID){
-        super(KEY);
+    public VideoRunnable(String videoID){
         this.videoID = videoID;
     }
 
@@ -44,7 +43,7 @@ public class VideoRunnable extends YoutubeRunnable {
             String videoTitle = snippet.getTitle();
             BigInteger views = statistics.getViewCount();
 
-            ThumbnailRunnable getThumbnail = new ThumbnailRunnable(KEY, channelID);
+            ThumbnailRunnable getThumbnail = new ThumbnailRunnable(channelID);
             Thread thread = new Thread(getThumbnail);
             thread.start();
             thread.join();

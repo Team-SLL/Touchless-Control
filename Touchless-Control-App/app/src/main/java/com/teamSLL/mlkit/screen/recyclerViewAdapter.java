@@ -2,13 +2,16 @@ package com.teamSLL.mlkit.screen;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.graphics.drawable.ShapeDrawable;
 import android.graphics.drawable.shapes.OvalShape;
 import android.os.Build;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -46,13 +49,13 @@ public class recyclerViewAdapter extends RecyclerView.Adapter<recyclerViewAdapte
         View view = mInflater.inflate(R.layout.recyclerview_item, parent, false);
 
         ViewGroup.LayoutParams layoutParams = view.getLayoutParams();
-        layoutParams.width = (int) (parent.getWidth() / 3);
+        layoutParams.width = (int) (parent.getWidth() / 3) - 18;
         view.setLayoutParams(layoutParams);
 
         return new ViewHolder(view);
     }
 
-    void setImage(ImageView view, String url){
+    private void setImage(ImageView view, String url){
         if(url == "") {
             view.setImageResource(R.drawable.transparent);
             return;
@@ -69,7 +72,7 @@ public class recyclerViewAdapter extends RecyclerView.Adapter<recyclerViewAdapte
                 });
     }
 
-    public String makeViews(BigInteger Views){
+    private String makeViews(BigInteger Views){
         if(Views == null) return "";
         float views = Views.floatValue();
         if(views < 1000){
@@ -89,7 +92,7 @@ public class recyclerViewAdapter extends RecyclerView.Adapter<recyclerViewAdapte
         return "조회수 " + String.format("%.1f",views) + "억회";
     }
 
-    public String makeUploadedTime(DateTime uploadedTime){
+    private String makeUploadedTime(DateTime uploadedTime){
         if(uploadedTime == null) return "";
 
         String t = "초 전";
@@ -111,7 +114,8 @@ public class recyclerViewAdapter extends RecyclerView.Adapter<recyclerViewAdapte
         return result + t;
     }
     // binds the data to the view and textview in each row
-    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+
+    @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         VideoInfo videoinfo = mVideoInfos.get(position);
@@ -126,12 +130,14 @@ public class recyclerViewAdapter extends RecyclerView.Adapter<recyclerViewAdapte
         holder.channelThumbnail.setBackground(mDrawable);
         holder.channelThumbnail.setClipToOutline(true);
 
-        if(videoinfo.videoID == "")
-            setImage(holder.videoThumbnail, "");
-        else
+        if(videoinfo.videoID == ""){
+            holder.background.setBackgroundColor(context.getColor(R.color.backwhite));
+        }
+        else{
             setImage(holder.videoThumbnail, "https://i.ytimg.com/vi/" + videoinfo.videoID + "/hqdefault.jpg");
+            holder.background.setBackground(context.getDrawable(R.drawable.round_recycler));
+        }
         setImage(holder.channelThumbnail, videoinfo.channelThumbnail);
-
 
     }
 
@@ -144,6 +150,7 @@ public class recyclerViewAdapter extends RecyclerView.Adapter<recyclerViewAdapte
         TextView channelTitle;
         TextView views;
         TextView uploadedTime;
+        LinearLayout background;
 
         @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
         ViewHolder(View itemView) {
@@ -154,6 +161,7 @@ public class recyclerViewAdapter extends RecyclerView.Adapter<recyclerViewAdapte
             channelTitle = itemView.findViewById(R.id.channelTitle);
             views = itemView.findViewById(R.id.views);
             uploadedTime = itemView.findViewById(R.id.uploadedTime);
+            background = itemView.findViewById(R.id.background);
             itemView.setOnClickListener(this);
         }
 
@@ -162,6 +170,13 @@ public class recyclerViewAdapter extends RecyclerView.Adapter<recyclerViewAdapte
             if (mClickListener != null) mClickListener.onItemClick(view, getAdapterPosition());
         }
     }
+
+    public void addVideos(List<VideoInfo> videoInfos){
+        int now = mVideoInfos.size()-1;
+        mVideoInfos.addAll(now, videoInfos);
+        notifyItemRangeChanged(now, mVideoInfos.size()-now-1);
+    }
+
 
     // total number of rows
     @Override

@@ -54,7 +54,7 @@ public class FaceDetectorProcessor extends VisionProcessorBase<List<Face>> {
 
   private final FaceDetector detector;
   private List<Face> Faces;
-  private MotionRecongition MR = new MotionRecongition();
+  private MotionRecongition MR;
 
 
   public FaceDetectorProcessor(Context context) {
@@ -68,7 +68,7 @@ public class FaceDetectorProcessor extends VisionProcessorBase<List<Face>> {
                     .build();
     // detector생성
     detector = FaceDetection.getClient(highAccuracyOpts);
-
+    MR = new MotionRecongition();
 
 //    FaceDetectorOptions faceDetectorOptions = PreferenceUtils.getFaceDetectorOptions(context);
 //    Log.v(MANUAL_TESTING_LOG, "Face detector options: " + faceDetectorOptions);

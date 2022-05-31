@@ -5,6 +5,8 @@
 
 package com.teamSLL.mlkit.facedetector;
 
+import android.util.Log;
+
 import com.google.mlkit.vision.face.Face;
 
 import java.util.Arrays;
@@ -32,9 +34,9 @@ public class MotionRecongition {
     public static final int EYE_CLOSED_LONG = 7;
 
     public MotionRecongition(){
-        hr = new HeadRecognition(0,0,15,15);
-        er = new EyeRecognition(2, 60);
-        mr = new MouthRecognition(40,2);
+        hr = new HeadRecognition(0,0,10,15, 300);
+        er = new EyeRecognition(1000, 1000000);
+        mr = new MouthRecognition(40,1000);
     }
 
     public int getHeadRLEvent(Face face){
@@ -81,7 +83,7 @@ public class MotionRecongition {
     }
 
     public int getAllEvent(Face face){
-        // return 0x0x0010110;
+
         return (int) Collections.max(Arrays.asList(
                 getHeadRLEvent(face),
                 getHeadUDEvent(face),

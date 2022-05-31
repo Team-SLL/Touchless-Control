@@ -7,61 +7,37 @@ import android.graphics.PointF;
 
 import com.google.mlkit.vision.face.Face;
 
+import java.sql.Time;
 import java.util.List;
 
 public class MouthRecognition {
-    private double openThreshold;
-    private int frames, frameThreshold;
+    private double threshold;
+    private TimeCheck checker;
 
-    public MouthRecognition(){
-        this.openThreshold = 100;
-        this.frameThreshold = 6;
-        this.frames = 0;
-    }
-
-    //1s = 3frames
-    public MouthRecognition(double threshold, int seconds){
-        this.openThreshold = threshold;
-        this.frameThreshold = seconds*3;
-        this.frames = 0;
+    public MouthRecognition(double threshold, long ms){
+        this.threshold = threshold;
+        this.checker = new TimeCheck(ms);
     }
 
     public int generationOpen(Face face){
-        double sum = 0;
-        if(face.getContour(LOWER_LIP_TOP) != null & face.getContour(UPPER_LIP_BOTTOM) != null){
-            List<PointF> top = face.getContour(LOWER_LIP_TOP).getPoints();
-            List<PointF> bottom = face.getContour(UPPER_LIP_BOTTOM).getPoints();
+        if(face.getContour(LOWER_LIP_TOP) == null || face.getContour(UPPER_LIP_BOTTOM) == null) return 0;
 
-            for(int i=0;i<9;i++){
-                sum += top.get(i).y - bottom.get(8 - i).y;
-            }
-            if(sum > openThreshold){
-                this.frames++;
-            }else{
-                this.frames = 0;
-            }
+        double sum = 0;
+        List<PointF> top = face.getContour(LOWER_LIP_TOP).getPoints();
+        List<PointF> bottom = face.getContour(UPPER_LIP_BOTTOM).getPoints();
+
+        for(int i=0;i<9;i++){
+            sum += top.get(i).y - bottom.get(8 - i).y;
         }
-        if(this.frames >= this.frameThreshold){
-            this.frames = 0;
-            return 1;
+        if(sum > threshold){
+            if(checker.isOveredThreshold()){
+                return 1;
+            }
+        }else{
+            checker.setPrevTime(0);
         }
+
         return 0;
     }
 
-    public void setOpenThreshold(double threshold) {
-        this.openThreshold = threshold;
-    }
-    public void setFrameThreshold(int seconds) {
-        this.frameThreshold = seconds*3;
-    }
-
-    public double getOpenThreshold() {
-        return openThreshold;
-    }
-    public int getFrameThreshold() {
-        return frameThreshold;
-    }
-    public int getTimes() {
-        return frames;
-    }
 }

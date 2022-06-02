@@ -11,18 +11,37 @@ import android.widget.ImageButton;
 import android.widget.SearchView;
 import android.widget.Toast;
 
+import com.teamSLL.mlkit.screen.UI;
+
 import java.util.ArrayList;
 import java.util.Locale;
 
+
+
 public class SpeechToText {
+    public static final short NONE = 0;
+    public static final short VIDEO_START = 1;
+    public static final short VIDEO_END = 2;
+    public static final short VIDEO_PLAY_STOP = 3;
+    public static final short NEXT_VIDEO = 5;
+    public static final short PREV_VIDEO = 6;
+    public static final short SEARCH_OPEN = 7;
+    public static final short SEARCH_CLOSE = 8;
+
     private Context context;
     private SpeechRecognizer speechRecognizer;
     private SearchView searchView;
+    private ImageButton micoffBtn;
+    private ImageButton miconBtn;
     int state = 0;
 
-    public SpeechToText(Context context, SearchView searchView, ImageButton miconBtn, ImageButton micoffBtn){
+    public SpeechToText(Context context, UI ui){
         this.context = context;
         speechRecognizer = SpeechRecognizer.createSpeechRecognizer(context);
+        micoffBtn = ui.getMicoffBtn();
+        miconBtn = ui.getMiconBtn();
+        searchView = ui.getSearchView();
+
 
         Intent speechRecognizerIntent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
         speechRecognizerIntent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL,RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
@@ -78,7 +97,7 @@ public class SpeechToText {
                     ArrayList<String> data = bundle.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION);
                     String[] rs = new String[data.size()];
                     data.toArray(rs);;
-                    FuncVoiceOrderCheck(rs[0]);
+                    FuncVoiceOrderCheck(rs[0],ui,speechRecognizerIntent);
                     speechRecognizer.startListening(speechRecognizerIntent);
                 }
             }
@@ -134,30 +153,50 @@ public class SpeechToText {
         });
 
     }
-    private void FuncVoiceOrderCheck(String VoiceMsg){
+    private void FuncVoiceOrderCheck(String VoiceMsg, UI ui, Intent speechRecognizerIntent){
         if(VoiceMsg.length()<1)return;
 
         VoiceMsg=VoiceMsg.replace(" ","");//공백제거
 
-        if(VoiceMsg.indexOf("재생")>-1 || VoiceMsg.indexOf("선택")>-1){
+        if(VoiceMsg.indexOf("시작")>-1 || VoiceMsg.indexOf("선택")>-1){
+            ui.use(VIDEO_START);
             Toast.makeText(context.getApplicationContext(), "재생",Toast.LENGTH_SHORT).show();
-        }//동영상 재생
+        }//동영상 선택
 
-        if(VoiceMsg.indexOf("검색")>-1 ){
+        else if(VoiceMsg.indexOf("멈춤")>-1 || VoiceMsg.indexOf("정지")>-1|| VoiceMsg.indexOf("재생")>-1){
+            ui.use(VIDEO_PLAY_STOP);
+            Toast.makeText(context.getApplicationContext(), "정지",Toast.LENGTH_SHORT).show();
+        }//동영상 정지 및 재생
+
+        else if(VoiceMsg.indexOf("종료")>-1){
+            ui.use(UI.VIDEO_END);
+            Toast.makeText(context.getApplicationContext(), "동영상 종료",Toast.LENGTH_SHORT).show();
+        }//동영상 정지
+
+        else if(VoiceMsg.indexOf("검색")>-1 ){
+            ui.use(UI.SEARCH_OPEN);
             Toast.makeText(context.getApplicationContext(), "검색",Toast.LENGTH_SHORT).show();
         }//동영상 검색
 
-        if(VoiceMsg.indexOf("멈춤")>-1 || VoiceMsg.indexOf("정지")>-1){
-            Toast.makeText(context.getApplicationContext(), "정지",Toast.LENGTH_SHORT).show();
-        }//동영상 재생
+        else if(VoiceMsg.indexOf("검색종료")>-1 ){
+            ui.use(UI.SEARCH_CLOSE);
+            Toast.makeText(context.getApplicationContext(), "검색 종료",Toast.LENGTH_SHORT).show();
+        }//동영상 검색 종료
 
-        if(VoiceMsg.indexOf("왼쪽")>-1 || VoiceMsg.indexOf("이전")>-1){
+        else if(VoiceMsg.indexOf("왼쪽")>-1 || VoiceMsg.indexOf("이전")>-1){
+            ui.use(UI.PREV_VIDEO);
             Toast.makeText(context.getApplicationContext(), "이전",Toast.LENGTH_SHORT).show();
         }//동영상 재생
 
-        if(VoiceMsg.indexOf("오른쪽")>-1 || VoiceMsg.indexOf("다음")>-1){
+        else if(VoiceMsg.indexOf("오른쪽")>-1 || VoiceMsg.indexOf("다음")>-1){
+            ui.use(UI.NEXT_VIDEO);
             Toast.makeText(context.getApplicationContext(), "다음",Toast.LENGTH_SHORT).show();
         }//동영상 재생
+
+        else{
+            Toast.makeText(context.getApplicationContext(), VoiceMsg+"다시 말씀해주세요",Toast.LENGTH_SHORT).show();
+            speechRecognizer.startListening(speechRecognizerIntent);
+        }
 
     }
 }

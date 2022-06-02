@@ -93,17 +93,6 @@
                 app:srcCompat="@drawable/ic_mic_on" />
           </LinearLayout>
 
-          <!--      <Button-->
-          <!--          android:id="@+id/setting_button"-->
-          <!--          android:layout_width="wrap_content"-->
-          <!--          android:layout_height="40dp"-->
-          <!--          android:text="Open"-->
-          <!--          android:textColor="@color/backwhite"-->
-          <!--          app:layout_constraintLeft_toLeftOf="parent"-->
-          <!--          app:layout_constraintTop_toTopOf="parent"-->
-          <!--          android:background="@drawable/round_button"-->
-          <!--          android:layout_margin="5dp"-->
-          <!--          android:fontFamily="@font/nexonlv1bold"/>-->
           <Space
               android:layout_width="0dp"
               android:layout_height="0dp"
@@ -133,14 +122,41 @@
             android:layout_marginRight="3dp"
             android:background="@drawable/round_left"
             android:orientation="vertical">
-
-          <androidx.recyclerview.widget.RecyclerView
-              android:id="@+id/rvVideos"
+          <FrameLayout
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
-              android:layout_gravity="center"
-              app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"></androidx.recyclerview.widget.RecyclerView>
+              android:layout_gravity="center">
 
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvVideos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <LinearLayout
+                android:id="@+id/loading"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:layout_gravity="center">
+
+              <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/progress_image"/>
+
+              <TextView
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:gravity="center"
+                  android:text="Loading..."
+                  android:fontFamily="@font/nexonlv1bold"
+                  android:textSize="16dp" />
+            </LinearLayout>
+
+          </FrameLayout>
           <SearchView
               android:id="@+id/search_view"
               android:layout_width="300dp"
@@ -182,6 +198,7 @@
 
 
         </FrameLayout>
+
 
       </LinearLayout>
 

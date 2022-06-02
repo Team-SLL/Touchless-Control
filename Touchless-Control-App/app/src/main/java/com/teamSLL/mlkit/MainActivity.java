@@ -24,6 +24,7 @@ import android.Manifest;
 import android.os.Build;
 import android.os.Build.VERSION_CODES;
 import android.os.Bundle;
+import android.speech.SpeechRecognizer;
 import android.util.Log;
 import android.util.Size;
 import android.view.inputmethod.InputMethodManager;
@@ -43,6 +44,7 @@ import androidx.lifecycle.ViewModelProvider.AndroidViewModelFactory;
 
 import com.google.android.gms.common.annotation.KeepName;
 import com.google.mlkit.common.MlKitException;
+import com.teamSLL.mlkit.STT.SpeechToText;
 import com.teamSLL.mlkit.screen.Setting;
 import com.teamSLL.mlkit.screen.UI;
 import com.teamSLL.mlkit.facedetector.FaceDetectorProcessor;
@@ -80,6 +82,9 @@ public final class MainActivity extends AppCompatActivity {
   private Setting setting;
 
   private UI ui; // UI를 조작하는데 관여하는 클래스
+
+  private SpeechToText stt;  // 음성명령어 조작을 위해 작성
+  private SpeechRecognizer speechRecognizer;
 
   private GraphicOverlay graphicOverlay; // 왼쪽 하단의 얼굴에 레이아웃 씌운것
   private TextView tv; // 얼굴 움직임을 0~7로 표시.
@@ -162,6 +167,8 @@ public final class MainActivity extends AppCompatActivity {
 
     // UI를 전반적으로 제어하는 클래스 생성
     ui = new UI(this, getApplicationContext());
+    // stt로 음성 명령어를 실행시키기 위해 작성해볼게요
+    stt = new SpeechToText(getApplicationContext(), ui); //음성인식 활성화
   }
 
 

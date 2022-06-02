@@ -27,4 +27,7 @@ public class EyeRecognition {
         }
         return 0;
     }
+    public void setTimeChecker(int ms){
+        this.shortChecker = new TimeCheck(ms);
+    }
 }

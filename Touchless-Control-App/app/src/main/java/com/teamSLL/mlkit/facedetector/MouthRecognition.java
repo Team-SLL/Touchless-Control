@@ -39,5 +39,7 @@ public class MouthRecognition {
 
         return 0;
     }
-
+    public void setTimeChecker(int ms){
+        this.checker = new TimeCheck(ms);
+    }
 }

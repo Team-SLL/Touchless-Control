@@ -179,4 +179,8 @@ public class FaceDetectorProcessor extends VisionProcessorBase<List<Face>> {
   protected void onFailure(@NonNull Exception e) {
     Log.e(TAG, "Face detection failed " + e);
   }
+
+  public void setMs(int head, int mouth, int eye){
+    MR.setMs(head, mouth, eye);
+  }
 }

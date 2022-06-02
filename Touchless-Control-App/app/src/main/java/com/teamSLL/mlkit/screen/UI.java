@@ -44,6 +44,7 @@ public class UI {
     public static final short PREV_VIDEO = 6;
     public static final short SEARCH_OPEN = 7;
     public static final short SEARCH_CLOSE = 8;
+    public static final short CLOSE_APP = 127;
 
     // youtube UI items
     private Activity activity;
@@ -109,7 +110,7 @@ public class UI {
             public boolean onQueryTextSubmit(String s) {
                 searchText = s;
                 nextVideoToken = "";
-                recyclerView.setVisibility(View.INVISIBLE);
+         //       recyclerView.setVisibility(View.INVISIBLE);
                 loading.setVisibility(View.VISIBLE);
                 updateUI(new SearchRunnable(s));
                 loadingStart();
@@ -132,7 +133,7 @@ public class UI {
                 homeBtn.setBackgroundResource(R.drawable.round_button_click);
                 searchView.setVisibility(View.INVISIBLE);
                 searchBtn.setBackgroundResource(R.drawable.round_button);
-                recyclerView.setVisibility(View.INVISIBLE);
+            //    recyclerView.setVisibility(View.INVISIBLE);
                 loading.setVisibility(View.VISIBLE);
                 updateUI(new PopularRunnable()); // 인기리스트 불러오기
                 loadingStart();
@@ -175,10 +176,10 @@ public class UI {
         recyclerView.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false));
         this.manager = (LinearLayoutManager) recyclerView.getLayoutManager();
 
-        recyclerView.setVisibility(View.INVISIBLE);
-        loading.setVisibility(View.VISIBLE);
+      //  recyclerView.setVisibility(View.INVISIBLE);
+     //   loading.setVisibility(View.VISIBLE);
         updateUI(new PopularRunnable());
-        loadingStart();
+    //    loadingStart();
 
     }
 
@@ -269,17 +270,16 @@ public class UI {
 
                 if(position != videoInfos.size()-1){
                     recyclerView.smoothScrollToPosition(position + 1);
-
-                }else if(!refresh){
+                }else if(!refresh && videoInfos.size() < 50){
                     refresh = true;
                     if(searchView.getVisibility() == View.INVISIBLE){
-                        recyclerView.setVisibility(View.INVISIBLE);
+                  //      recyclerView.setVisibility(View.INVISIBLE);
                         loading.setVisibility(View.VISIBLE);
                         updateUI(new PopularRunnable(nextVideoToken));
                         loadingStart();
                     }
                     else {
-                        recyclerView.setVisibility(View.INVISIBLE);
+                  //      recyclerView.setVisibility(View.INVISIBLE);
                         loading.setVisibility(View.VISIBLE);
                         updateUI(new SearchRunnable(searchText, nextVideoToken));
                         loadingStart();
@@ -295,12 +295,19 @@ public class UI {
                 break;
             case SEARCH_OPEN:
                 if(isFullScreen || youtubePlayer.isPlaying()) break;
-                searchBtn.performClick();
-                searchView.setIconified(false);
-                searchView.setQuery("",false);
+                if(searchView.getVisibility() == View.VISIBLE){
+                    homeBtn.performClick();
+                }else{
+                    searchBtn.performClick();
+                    searchView.setIconified(false);
+                    searchView.setQuery("",false);
+                }
                 break;
             case SEARCH_CLOSE:
                 closeSearchView();
+                break;
+            case CLOSE_APP:
+                activity.finish();
                 break;
             default:
                 Log.e("Use Ui", "wrong event command");
@@ -324,10 +331,10 @@ public class UI {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                recyclerView.setVisibility(View.VISIBLE);
+           //     recyclerView.setVisibility(View.VISIBLE);
                 loading.setVisibility(View.INVISIBLE);
             }
-        },3000);
+        },800);
     }
 
     // 검색창 활성화 되어있으면 False

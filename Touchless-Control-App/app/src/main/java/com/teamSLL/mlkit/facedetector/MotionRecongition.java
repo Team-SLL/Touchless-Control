@@ -90,4 +90,10 @@ public class MotionRecongition {
                 getEyeClosedEvent(face),
                 getMouseOpenEvent(face)));
     }
+
+    public void setMs(int head, int mouth, int eye){
+        hr.setTimeChecker(head);
+        mr.setTimeChecker(mouth);
+        er.setTimeChecker(eye);
+    }
 }

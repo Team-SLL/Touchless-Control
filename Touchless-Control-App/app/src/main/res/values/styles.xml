@@ -10,11 +10,12 @@
         <!-- The hint text that appears when the user has not typed anything -->
         <item name="queryHint">@string/search_hint</item>
     </style>
+
     <style name="SpinnerDivideStyle" parent="android:style/Widget.ListView.DropDown">
         <item name="android:divider">@color/darkgreen</item> <!-- divider 색 -->
         <item name="android:dividerHeight">1dp</item> <!-- divider 높이 -->
         <item name="android:background">@color/backwhite</item>
-        <item name="android:textColor">@color/text</item>
+        <item name="android:textColor">@color/black</item>
         <item name="android:paddingTop">3dp</item>
         <item name="android:padding">5dp</item>
     </style>
@@ -22,4 +23,5 @@
     <style name="SpinnerTheme" parent="AppTheme">
         <item name="android:dropDownListViewStyle">@style/SpinnerDivideStyle</item>
     </style>
+
 </resources>

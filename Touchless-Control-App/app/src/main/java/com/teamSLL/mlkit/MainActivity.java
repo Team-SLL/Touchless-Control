@@ -84,7 +84,6 @@ public final class MainActivity extends AppCompatActivity {
   private UI ui; // UI를 조작하는데 관여하는 클래스
 
   private SpeechToText stt;  // 음성명령어 조작을 위해 작성
-  private SpeechRecognizer speechRecognizer;
 
   private GraphicOverlay graphicOverlay; // 왼쪽 하단의 얼굴에 레이아웃 씌운것
   private TextView tv; // 얼굴 움직임을 0~7로 표시.
@@ -160,7 +159,6 @@ public final class MainActivity extends AppCompatActivity {
 
   // layout Init
   private void initUI() {
-    motionToUI = setting.getSetting();
 
     tv = findViewById(R.id.textView); //현재 얼굴인식 결과 : 테스트용
     graphicOverlay = findViewById(R.id.graphic_overlay);
@@ -198,7 +196,6 @@ public final class MainActivity extends AppCompatActivity {
     if (imageProcessor != null) {
       imageProcessor.stop();
     }
-  //  speechRecognizer.destroy();
   }
 
   private void bindAnalysisUseCase() {
@@ -217,6 +214,7 @@ public final class MainActivity extends AppCompatActivity {
     cameraProvider.unbindAll();
     // 얼굴 인식 객체 생성 (모델 생성)
     imageProcessor = new FaceDetectorProcessor(this);
+    setHyperparameter();
 
     ImageAnalysis.Builder builder = new ImageAnalysis.Builder(); //카메라
     Size targetResolution = PreferenceUtils.getCameraXTargetResolution(this, lensFacing);
@@ -282,10 +280,18 @@ public final class MainActivity extends AppCompatActivity {
     }
     if(ui.isSettingOpen()){
       ui.closeSetting();
-      motionToUI = setting.getSetting();
+      setHyperparameter();
       return;
     }
     super.onBackPressed();
+  }
+
+  private void setHyperparameter(){
+    motionToUI = setting.getSetting();
+    int head = setting.getHeadMs();
+    int mouth = setting.getMouthMs();
+    int eye = setting.getEyeMs();
+    ((FaceDetectorProcessor)imageProcessor).setMs(head, mouth, eye);
   }
 
 }

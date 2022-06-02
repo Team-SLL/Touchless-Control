@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.util.List;
 
 public class SearchRunnable extends YoutubeRunnable {
-    private int MAX_LEN = 3; // Quota = 100 + MAX_LEN*2
+    private int MAX_LEN = 10; // Quota = 100 + MAX_LEN*2
     private String keyword;
     private String nextToken = "";
 

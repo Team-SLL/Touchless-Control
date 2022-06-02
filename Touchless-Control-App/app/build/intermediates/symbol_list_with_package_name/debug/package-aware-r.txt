@@ -552,6 +552,7 @@ color background_floating_material_light
 color background_material_dark
 color background_material_light
 color backwhite
+color black
 color blue
 color blue_grey_400
 color bora
@@ -631,7 +632,9 @@ color switch_thumb_material_dark
 color switch_thumb_material_light
 color switch_thumb_normal_material_dark
 color switch_thumb_normal_material_light
-color text
+color text1
+color text2
+color text3
 color tooltip_background_dark
 color tooltip_background_light
 color white
@@ -755,6 +758,9 @@ dimen notification_top_pad_large_text
 dimen padding_standard
 dimen setting_item_margin
 dimen setting_item_padding
+dimen setting_layout_weight
+dimen setting_spinner_weight
+dimen setting_text_weight
 dimen setting_title_margin
 dimen tooltip_corner_radius
 dimen tooltip_horizontal_padding
@@ -883,6 +889,7 @@ drawable ic_arrow_dropdown
 drawable ic_baseline_dehaze_48
 drawable ic_close
 drawable ic_home
+drawable ic_loading
 drawable ic_mic_black_24dp
 drawable ic_mic_black_off
 drawable ic_mic_off
@@ -907,6 +914,7 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable progress_image
 drawable round_button
 drawable round_button_click
 drawable round_buttonstrok
@@ -1055,6 +1063,7 @@ id edit_query
 id end
 id expand_activities_button
 id expanded_menu
+id eye_rec_ms
 id fillCenter
 id fillEnd
 id fillStart
@@ -1072,6 +1081,7 @@ id graphic_overlay
 id group_divider
 id grouping
 id groups
+id head_rec_ms
 id home
 id homeAsUp
 id home_button
@@ -1098,6 +1108,7 @@ id linear
 id linearLayout
 id listMode
 id list_item
+id loading
 id main_layout
 id message
 id micoff_button
@@ -1105,6 +1116,7 @@ id micon_button
 id middle
 id mixed
 id motion_base
+id mouth_rec_ms
 id multiply
 id never
 id none
@@ -1205,6 +1217,10 @@ id textView_main_3
 id textView_main_4
 id textView_search
 id textView_search_1
+id textView_time
+id textView_time_1
+id textView_time_2
+id textView_time_3
 id textView_video
 id textView_video_1
 id textView_video_2

@@ -22,6 +22,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/setting_title_margin"
                     android:text="메인화면 동작"
+                    android:textColor="@color/text1"
                     android:fontFamily="@font/nexonlv1bold"/>
             </LinearLayout>
 
@@ -46,7 +47,8 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="2"
-                            android:text="이전동영상"
+                            android:text="이전 동영상"
+                            android:textColor="@color/text2"
                             android:fontFamily="@font/nexonlv1regular"/>
 
                         <Spinner
@@ -76,7 +78,8 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="2"
-                            android:text="다음동영상"
+                            android:text="다음 동영상"
+                            android:textColor="@color/text2"
                             android:fontFamily="@font/nexonlv1regular" />
 
                         <Spinner
@@ -106,7 +109,8 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="2"
-                            android:text="동영상재생"
+                            android:text="동영상 재생"
+                            android:textColor="@color/text2"
                             android:fontFamily="@font/nexonlv1regular"/>
 
                         <Spinner
@@ -136,7 +140,8 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="2"
-                            android:text="검색창활성화"
+                            android:text="검색창 활성화"
+                            android:textColor="@color/text2"
                             android:fontFamily="@font/nexonlv1regular"/>
 
                         <Spinner
@@ -162,6 +167,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
                     android:text="동영상 재생중 화면"
+                    android:textColor="@color/text1"
                     android:fontFamily="@font/nexonlv1bold"/>
             </LinearLayout>
 
@@ -178,21 +184,22 @@
                         android:gravity="right"
                         android:orientation="horizontal"
                         android:paddingRight="@dimen/setting_item_padding"
-                        android:weightSum="@integer/setting_layout_weight">
+                        android:weightSum="@dimen/setting_layout_weight">
 
                         <TextView
                             android:id="@+id/textView_video_1"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight="@integer/setting_text_weight"
+                            android:layout_weight="@dimen/setting_text_weight"
                             android:text="동영상 종료"
+                            android:textColor="@color/text2"
                             android:fontFamily="@font/nexonlv1regular" />
 
                         <Spinner
                             android:id="@+id/spinner_video_1"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight="@integer/setting_spinner_weight"
+                            android:layout_weight="@dimen/setting_spinner_weight"
                             android:spinnerMode="dropdown"
                             android:fontFamily="@font/nexonlv1light"
                             android:background="@drawable/spinner_background"
@@ -208,21 +215,22 @@
                         android:gravity="right"
                         android:orientation="horizontal"
                         android:paddingRight="@dimen/setting_item_padding"
-                        android:weightSum="@integer/setting_layout_weight">
+                        android:weightSum="@dimen/setting_layout_weight">
 
                         <TextView
                             android:id="@+id/textView_video_2"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight="@integer/setting_text_weight"
+                            android:layout_weight="@dimen/setting_text_weight"
                             android:text="일시중지 및 재생"
+                            android:textColor="@color/text1"
                             android:fontFamily="@font/nexonlv1regular"/>
 
                         <Spinner
                             android:id="@+id/spinner_video_2"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight="@integer/setting_spinner_weight"
+                            android:layout_weight="@dimen/setting_spinner_weight"
                             android:spinnerMode="dropdown"
                             android:fontFamily="@font/nexonlv1light"
                             android:background="@drawable/spinner_background"
@@ -241,7 +249,9 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:text="검색중 동작"
+                android:textColor="@color/text1"
                 android:fontFamily="@font/nexonlv1bold"/>
+
         </LinearLayout>
 
 
@@ -259,32 +269,157 @@
                         android:gravity="right"
                         android:orientation="horizontal"
                         android:paddingRight="@dimen/setting_item_padding"
-                        android:weightSum="@integer/setting_layout_weight">
+                        android:weightSum="@dimen/setting_layout_weight">
 
                         <TextView
                             android:id="@+id/textView_search_1"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight="@integer/setting_text_weight"
+                            android:layout_weight="@dimen/setting_text_weight"
                             android:text="검색 종료"
+                            android:textColor="@color/text2"
                             android:fontFamily="@font/nexonlv1regular" />
 
                         <Spinner
                             android:id="@+id/spinner_search_1"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight="@integer/setting_spinner_weight"
-                            android:spinnerMode="dropdown"
-                            android:fontFamily="@font/nexonlv1light"
+                            android:layout_weight="@dimen/setting_spinner_weight"
                             android:background="@drawable/spinner_background"
-                            android:theme="@style/SpinnerTheme"
-                            android:dropDownVerticalOffset="25dp"/>
+                            android:dropDownVerticalOffset="25dp"
+                            android:fontFamily="@font/nexonlv1light"
+                            android:spinnerMode="dropdown"
+                            android:theme="@style/SpinnerTheme" />
                     </LinearLayout>
 
                 </LinearLayout>
 
 
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/line">
 
+                <TextView
+                    android:id="@+id/textView_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/nexonlv1bold"
+                    android:textColor="@color/text1"
+                    android:text="동작 최소 지속 시간 (ms)" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/setting_item_margin"
+                    android:layout_marginBottom="@dimen/setting_item_margin"
+                    android:gravity="right"
+                    android:orientation="horizontal"
+                    android:paddingRight="@dimen/setting_item_padding"
+                    android:weightSum="@dimen/setting_layout_weight">
+
+                    <TextView
+                        android:id="@+id/textView_time_1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="@dimen/setting_text_weight"
+                        android:textColor="@color/text2"
+                        android:fontFamily="@font/nexonlv1regular"
+                        android:text="고개 움직임 시간" />
+
+                    <EditText
+                        android:id="@+id/head_rec_ms"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="@dimen/setting_spinner_weight"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:hint="ms"
+                        android:textColor="@color/text2"
+                        android:inputType="numberSigned"
+                        android:text="300" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/setting_item_margin"
+                    android:layout_marginBottom="@dimen/setting_item_margin"
+                    android:gravity="right"
+                    android:orientation="horizontal"
+                    android:paddingRight="@dimen/setting_item_padding"
+                    android:weightSum="@dimen/setting_layout_weight">
+
+                    <TextView
+                        android:id="@+id/textView_time_2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="@dimen/setting_text_weight"
+                        android:textColor="@color/text2"
+                        android:fontFamily="@font/nexonlv1regular"
+                        android:text="눈 깜박임 시간" />
+
+                    <EditText
+                        android:id="@+id/eye_rec_ms"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="@dimen/setting_spinner_weight"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:hint="ms"
+                        android:textColor="@color/text2"
+                        android:inputType="numberSigned"
+                        android:text="1000" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/setting_item_margin"
+                    android:layout_marginBottom="@dimen/setting_item_margin"
+                    android:gravity="right"
+                    android:orientation="horizontal"
+                    android:paddingRight="@dimen/setting_item_padding"
+                    android:weightSum="@dimen/setting_layout_weight">
+
+                    <TextView
+                        android:id="@+id/textView_time_3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="@dimen/setting_text_weight"
+                        android:fontFamily="@font/nexonlv1regular"
+                        android:textColor="@color/text2"
+                        android:text="입 벌림 시간" />
+
+                    <EditText
+                        android:id="@+id/mouth_rec_ms"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="@dimen/setting_spinner_weight"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:textColor="@color/text2"
+                        android:hint="ms"
+                        android:inputType="numberSigned"
+                        android:text="1000" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
 
 
             <LinearLayout

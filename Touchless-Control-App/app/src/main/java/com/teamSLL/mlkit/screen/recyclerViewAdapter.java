@@ -60,8 +60,8 @@ public class recyclerViewAdapter extends RecyclerView.Adapter<recyclerViewAdapte
             view.setImageResource(R.drawable.transparent);
             return;
         }
-        Picasso.with(this.context).load(url).placeholder(R.mipmap.ic_launcher)
-                .error(R.mipmap.ic_launcher)
+        Picasso.with(this.context).load(url).placeholder(R.drawable.transparent)
+                .error(R.drawable.transparent)
                 .into(view, new com.squareup.picasso.Callback() {
                     @Override
                     public void onSuccess() {
@@ -131,6 +131,7 @@ public class recyclerViewAdapter extends RecyclerView.Adapter<recyclerViewAdapte
         holder.channelThumbnail.setClipToOutline(true);
 
         if(videoinfo.videoID == ""){
+            setImage(holder.videoThumbnail, "");
             holder.background.setBackgroundColor(context.getColor(R.color.backwhite));
         }
         else{
@@ -172,9 +173,9 @@ public class recyclerViewAdapter extends RecyclerView.Adapter<recyclerViewAdapte
     }
 
     public void addVideos(List<VideoInfo> videoInfos){
-        int now = mVideoInfos.size()-1;
-        mVideoInfos.addAll(now, videoInfos);
-        notifyItemRangeChanged(now, mVideoInfos.size()-now-1);
+        int now = mVideoInfos.size();
+        mVideoInfos.addAll(now-1, videoInfos);
+        notifyItemRangeChanged(now-1, mVideoInfos.size()-now+1);
     }
 
 

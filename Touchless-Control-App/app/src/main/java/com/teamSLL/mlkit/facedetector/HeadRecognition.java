@@ -54,4 +54,8 @@ public class HeadRecognition {
         }
         return 0;
     }
+    public void setTimeChecker(int ms){
+        this.udChecker = new TimeCheck(ms);
+        this.rlChecker = new TimeCheck(ms);
+    }
 }

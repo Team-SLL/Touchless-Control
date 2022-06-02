@@ -21,8 +21,12 @@
     <color name="backgreen">#C6D5CF</color>
     <color name="green">#8DAB9E</color>
     <color name="darkgreen">#537062</color>
-    <color name="text">#3F3E47</color>
+    <color name="text1">#191919</color>
+    <color name="text2">#2f3640</color>
+    <color name="text3">#3F3E47</color>
     <color name="Beige">#D9CEC6</color>
     <color name="backwhite">#F5F5F5</color>
+    <color name="black">#000000</color>
+
 
 </resources>

@@ -17,7 +17,6 @@ import java.util.ArrayList;
 import java.util.Locale;
 
 
-
 public class SpeechToText {
     public static final short NONE = 0;
     public static final short VIDEO_START = 1;
@@ -42,7 +41,6 @@ public class SpeechToText {
         miconBtn = ui.getMiconBtn();
         searchView = ui.getSearchView();
 
-
         Intent speechRecognizerIntent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
         speechRecognizerIntent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL,RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
         speechRecognizerIntent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale.getDefault());
@@ -59,9 +57,6 @@ public class SpeechToText {
                     searchView.setQuery("", false);
                     searchView.setQueryHint("Listening...");
                 }
-                else if (miconBtn.getVisibility() == View.VISIBLE){
-                    Toast.makeText(context.getApplicationContext(), "음성인식모드",Toast.LENGTH_SHORT).show();
-                }
             }
 
             @Override
@@ -76,12 +71,14 @@ public class SpeechToText {
 
             @Override
             public void onEndOfSpeech() {
-
+                if (miconBtn.getVisibility() == View.VISIBLE){
+                    speechRecognizer.startListening(speechRecognizerIntent);
+                }
             }
 
             @Override
             public void onError(int i) {
-
+                speechRecognizer.startListening(speechRecognizerIntent);
             }
 
             @Override
@@ -92,13 +89,12 @@ public class SpeechToText {
                     state = 0;
                 }
                 else if (miconBtn.getVisibility() == View.VISIBLE){
-                    String key= "";
-                    key = SpeechRecognizer.RESULTS_RECOGNITION;
+                    String key = SpeechRecognizer.RESULTS_RECOGNITION;
                     ArrayList<String> data = bundle.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION);
                     String[] rs = new String[data.size()];
-                    data.toArray(rs);;
+                    data.toArray(rs);
                     FuncVoiceOrderCheck(rs[0],ui,speechRecognizerIntent);
-                    speechRecognizer.startListening(speechRecognizerIntent);
+
                 }
             }
 
@@ -163,7 +159,7 @@ public class SpeechToText {
             Toast.makeText(context.getApplicationContext(), "재생",Toast.LENGTH_SHORT).show();
         }//동영상 선택
 
-        else if(VoiceMsg.indexOf("멈춤")>-1 || VoiceMsg.indexOf("정지")>-1|| VoiceMsg.indexOf("재생")>-1){
+        else if(VoiceMsg.indexOf("멈춤")>-1 || VoiceMsg.indexOf("정지")>-1 || VoiceMsg.indexOf("재생")>-1){
             ui.use(VIDEO_PLAY_STOP);
             Toast.makeText(context.getApplicationContext(), "정지",Toast.LENGTH_SHORT).show();
         }//동영상 정지 및 재생
@@ -173,12 +169,12 @@ public class SpeechToText {
             Toast.makeText(context.getApplicationContext(), "동영상 종료",Toast.LENGTH_SHORT).show();
         }//동영상 정지
 
-        else if(VoiceMsg.indexOf("검색")>-1 ){
+        else if(VoiceMsg.indexOf("검색")>-1 || VoiceMsg.indexOf("메인")>-1 || VoiceMsg.indexOf("홈")>-1){
             ui.use(UI.SEARCH_OPEN);
             Toast.makeText(context.getApplicationContext(), "검색",Toast.LENGTH_SHORT).show();
         }//동영상 검색
 
-        else if(VoiceMsg.indexOf("검색종료")>-1 ){
+        else if(VoiceMsg.indexOf("검색종료")>-1){
             ui.use(UI.SEARCH_CLOSE);
             Toast.makeText(context.getApplicationContext(), "검색 종료",Toast.LENGTH_SHORT).show();
         }//동영상 검색 종료
@@ -194,9 +190,10 @@ public class SpeechToText {
         }//동영상 재생
 
         else{
-            Toast.makeText(context.getApplicationContext(), VoiceMsg+"다시 말씀해주세요",Toast.LENGTH_SHORT).show();
-            speechRecognizer.startListening(speechRecognizerIntent);
+            Toast.makeText(context.getApplicationContext(), VoiceMsg+" 다시 말씀해주세요",Toast.LENGTH_SHORT).show();
         }
+
+        speechRecognizer.startListening(speechRecognizerIntent);
 
     }
 }

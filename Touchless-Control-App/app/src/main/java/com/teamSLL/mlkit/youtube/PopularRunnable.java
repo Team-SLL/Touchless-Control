@@ -15,7 +15,7 @@ import java.math.BigInteger;
 import java.util.List;
 
 public class PopularRunnable extends YoutubeRunnable {
-    private int MAX_LEN = 3; // Quota = 1 + MAX_LEN
+    private int MAX_LEN = 10; // Quota = 1 + MAX_LEN
     private String nextToken = "";
 
     public PopularRunnable(){

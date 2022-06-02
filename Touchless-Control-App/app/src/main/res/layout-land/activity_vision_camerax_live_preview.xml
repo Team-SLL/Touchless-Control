@@ -137,22 +137,29 @@
 
             <LinearLayout
                 android:id="@+id/loading"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:orientation="vertical"
-              android:layout_gravity="center">
+                android:layout_width="234dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:layout_weight="1"
+                android:background="@color/backwhite"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="invisible">
 
               <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:src="@drawable/progress_image"/>
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center"
+                  android:layout_marginBottom="5dp"
+                  android:src="@drawable/progress_image" />
 
               <TextView
                   android:layout_width="match_parent"
                   android:layout_height="wrap_content"
+                  android:fontFamily="@font/nexonlv1bold"
                   android:gravity="center"
                   android:text="Loading..."
-                  android:fontFamily="@font/nexonlv1bold"
+                  android:textAlignment="center"
                   android:textSize="16dp" />
             </LinearLayout>
 
@@ -191,7 +198,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="0"
                 android:textColor="@android:color/black"
                 android:textSize="30sp" />
           </LinearLayout>

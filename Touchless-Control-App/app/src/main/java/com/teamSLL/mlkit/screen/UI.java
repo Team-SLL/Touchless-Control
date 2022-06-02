@@ -2,6 +2,7 @@ package com.teamSLL.mlkit.screen;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Handler;
 import android.os.Looper;
@@ -12,6 +13,7 @@ import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.SearchView;
 
 import androidx.annotation.NonNull;
@@ -28,6 +30,8 @@ import com.teamSLL.mlkit.STT.SpeechToText;
 import com.teamSLL.mlkit.youtube.PopularRunnable;
 import com.teamSLL.mlkit.youtube.SearchRunnable;
 import com.teamSLL.mlkit.youtube.YoutubeRunnable;
+
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
@@ -59,6 +63,8 @@ public class UI {
     private ImageButton homeBtn;
     private ImageButton searchBtn;
 
+    private LinearLayout loading;
+
     private SpeechToText stt;
     private SpeechRecognizer speechRecognizer;
     private DrawerLayout settingLayout;
@@ -74,6 +80,7 @@ public class UI {
         this.activity = activity;
         this.context = context;
 
+        this.loading = activity.findViewById(R.id.loading);
         this.settingBtn = activity.findViewById(R.id.setting_button);   //이미지 버튼 연결
         this.settingLayout = (DrawerLayout) activity.findViewById(R.id.drawer);
         this.micoffBtn = activity.findViewById(R.id.micoff_button);
@@ -102,7 +109,10 @@ public class UI {
             public boolean onQueryTextSubmit(String s) {
                 searchText = s;
                 nextVideoToken = "";
+                recyclerView.setVisibility(View.INVISIBLE);
+                loading.setVisibility(View.VISIBLE);
                 updateUI(new SearchRunnable(s));
+                loadingStart();
                 closeSearchView();
                 return true;
             }
@@ -112,7 +122,7 @@ public class UI {
                 return true;
             }
         });
-        stt = new SpeechToText(context, searchView, miconBtn, micoffBtn); //음성인식 활성화
+       // stt = new SpeechToText(context, searchView, miconBtn, micoffBtn); //음성인식 활성화
 
         homeBtn.setOnClickListener(new View.OnClickListener(){  // 인기리스트로 돌아가기
             @Override
@@ -122,7 +132,10 @@ public class UI {
                 homeBtn.setBackgroundResource(R.drawable.round_button_click);
                 searchView.setVisibility(View.INVISIBLE);
                 searchBtn.setBackgroundResource(R.drawable.round_button);
+                recyclerView.setVisibility(View.INVISIBLE);
+                loading.setVisibility(View.VISIBLE);
                 updateUI(new PopularRunnable()); // 인기리스트 불러오기
+                loadingStart();
             }
         });
 
@@ -135,9 +148,6 @@ public class UI {
             }
         });
 
-        if(micoffBtn.getVisibility() == View.GONE){
-            stt = new SpeechToText(context, searchView, miconBtn, micoffBtn); //음성인식 활성화
-        }
 
         // 유튜브 영상을 재생할 프레그먼트
         YouTubePlayerFragment youtubePlayerFragment = (YouTubePlayerFragment) activity.getFragmentManager().findFragmentById(R.id.youtube_player_fragment); //유튜브 재생 프래그먼트, 유튜브 영상 재생용
@@ -165,7 +175,11 @@ public class UI {
         recyclerView.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false));
         this.manager = (LinearLayoutManager) recyclerView.getLayoutManager();
 
+        recyclerView.setVisibility(View.INVISIBLE);
+        loading.setVisibility(View.VISIBLE);
         updateUI(new PopularRunnable());
+        loadingStart();
+
     }
 
     public void updateUI(YoutubeRunnable requestedRunnable){
@@ -258,9 +272,18 @@ public class UI {
 
                 }else if(!refresh){
                     refresh = true;
-                    if(searchView.getVisibility() == View.INVISIBLE)
+                    if(searchView.getVisibility() == View.INVISIBLE){
+                        recyclerView.setVisibility(View.INVISIBLE);
+                        loading.setVisibility(View.VISIBLE);
                         updateUI(new PopularRunnable(nextVideoToken));
-                    else updateUI(new SearchRunnable(searchText, nextVideoToken));
+                        loadingStart();
+                    }
+                    else {
+                        recyclerView.setVisibility(View.INVISIBLE);
+                        loading.setVisibility(View.VISIBLE);
+                        updateUI(new SearchRunnable(searchText, nextVideoToken));
+                        loadingStart();
+                    }
                 }
                 break;
             case PREV_VIDEO:
@@ -296,6 +319,17 @@ public class UI {
         }
     }
 
+    private void loadingStart(){
+        Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                recyclerView.setVisibility(View.VISIBLE);
+                loading.setVisibility(View.INVISIBLE);
+            }
+        },3000);
+    }
+
     // 검색창 활성화 되어있으면 False
     public boolean isSearchViewOpened(){
         return searchView.isHovered();
@@ -310,6 +344,16 @@ public class UI {
     }
     public void closeSetting(){ settingLayout.closeDrawer(Gravity.RIGHT); }
 
+    public ImageButton getMicoffBtn(){  //SpeechToText에서 버튼을 조작할 수 있도록하기 위함
+        return micoffBtn;
+    }
+    public ImageButton getMiconBtn(){
+        return miconBtn;
+    }
+
+    public SearchView getSearchView(){
+        return searchView;
+    }
 
 
 }

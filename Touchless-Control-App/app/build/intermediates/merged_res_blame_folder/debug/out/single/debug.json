@@ -4,12 +4,12 @@
         "source": "D:\\andoird\\youtube-touchless\\Touchless-Control-App\\app\\src\\main\\res\\drawable-mdpi\\round_search.xml"
     },
     {
-        "merged": "D:\\andoird\\youtube-touchless\\Touchless-Control-App\\app\\build\\intermediates\\merged_res\\debug\\drawable-xhdpi_ic_switch_camera_white_48dp.xml.flat",
-        "source": "D:\\andoird\\youtube-touchless\\Touchless-Control-App\\app\\src\\main\\res\\drawable-xhdpi\\ic_switch_camera_white_48dp.xml"
-    },
-    {
         "merged": "D:\\andoird\\youtube-touchless\\Touchless-Control-App\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_round_recycler.xml.flat",
         "source": "D:\\andoird\\youtube-touchless\\Touchless-Control-App\\app\\src\\main\\res\\drawable-mdpi\\round_recycler.xml"
+    },
+    {
+        "merged": "D:\\andoird\\youtube-touchless\\Touchless-Control-App\\app\\build\\intermediates\\merged_res\\debug\\drawable-xhdpi_ic_switch_camera_white_48dp.xml.flat",
+        "source": "D:\\andoird\\youtube-touchless\\Touchless-Control-App\\app\\src\\main\\res\\drawable-xhdpi\\ic_switch_camera_white_48dp.xml"
     },
     {
         "merged": "D:\\andoird\\youtube-touchless\\Touchless-Control-App\\app\\build\\intermediates\\merged_res\\debug\\drawable_line.xml.flat",
@@ -20,12 +20,12 @@
         "source": "D:\\andoird\\youtube-touchless\\Touchless-Control-App\\app\\src\\main\\res\\font\\nexonlv1light.ttf"
     },
     {
-        "merged": "D:\\andoird\\youtube-touchless\\Touchless-Control-App\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_vision_camerax_live_preview.xml.flat",
-        "source": "D:\\andoird\\youtube-touchless\\Touchless-Control-App\\app\\src\\main\\res\\layout\\activity_vision_camerax_live_preview.xml"
-    },
-    {
         "merged": "D:\\andoird\\youtube-touchless\\Touchless-Control-App\\app\\build\\intermediates\\merged_res\\debug\\drawable_transparent.png.flat",
         "source": "D:\\andoird\\youtube-touchless\\Touchless-Control-App\\app\\src\\main\\res\\drawable\\transparent.png"
+    },
+    {
+        "merged": "D:\\andoird\\youtube-touchless\\Touchless-Control-App\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_vision_camerax_live_preview.xml.flat",
+        "source": "D:\\andoird\\youtube-touchless\\Touchless-Control-App\\app\\src\\main\\res\\layout\\activity_vision_camerax_live_preview.xml"
     },
     {
         "merged": "D:\\andoird\\youtube-touchless\\Touchless-Control-App\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_home.xml.flat",

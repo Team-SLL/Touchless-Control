@@ -185,7 +185,8 @@
               android:layout_marginTop="230dp"
               android:layout_marginEnd="531dp"
               android:layout_marginBottom="11dp"
-              android:gravity="center">
+              android:gravity="center"
+              android:visibility="invisible">
 
             <com.teamSLL.mlkit.camera.GraphicOverlay
                 android:id="@+id/graphic_overlay"

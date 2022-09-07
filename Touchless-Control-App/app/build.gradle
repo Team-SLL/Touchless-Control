@@ -81,7 +81,7 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.8.6'
     implementation 'com.google.guava:guava:27.1-android'
     implementation 'androidx.recyclerview:recyclerview:1.2.1'
-    implementation fileTree(dir: 'C:\\Users\\arist\\Desktop\\new\\mlkit-quickstart\\app\\libs', include: ['*.aar', '*.jar'], exclude: [])
+    //implementation fileTree(dir: 'C:\\Users\\arist\\Desktop\\new\\mlkit-quickstart\\app\\libs', include: ['*.aar', '*.jar'], exclude: [])
 
     // For how to setup gradle dependencies in Android X, see:
     // https://developer.android.com/training/testing/set-up-project#gradle-dependencies
@@ -112,9 +112,10 @@ dependencies {
     implementation "com.google.android.odml:image:1.0.0-beta1"
 
     implementation 'com.google.apis:google-api-services-youtube:v3-rev183-1.22.0'
-    implementation 'com.google.http-client:google-http-client-android:+'
-    implementation 'com.google.api-client:google-api-client-android:+'
-    implementation 'com.google.api-client:google-api-client-gson:+'
+    implementation 'com.google.api-client:google-api-client:1.30.5'
+    implementation 'com.google.api-client:google-api-client-android:1.30.5'
+    implementation 'com.google.api-client:google-api-client-gson:1.30.5'
+
 
 }
 

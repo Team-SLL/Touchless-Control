@@ -24,7 +24,7 @@
         <LinearLayout
             android:layout_width="49dp"
             android:layout_height="match_parent"
-            android:layout_margin="5dp"
+            android:layout_marginRight ="5dp"
             android:background="@drawable/round_menu"
             android:orientation="vertical"
             android:paddingLeft="5dp"
@@ -186,7 +186,7 @@
               android:layout_marginEnd="531dp"
               android:layout_marginBottom="11dp"
               android:gravity="center"
-              android:visibility="invisible">
+              android:visibility="visible">
 
             <com.teamSLL.mlkit.camera.GraphicOverlay
                 android:id="@+id/graphic_overlay"

@@ -75,7 +75,7 @@ public final class MainActivity extends AppCompatActivity {
 
 
   private String selectedModel = FACE_DETECTION;
-  private int lensFacing = CameraSelector.LENS_FACING_BACK;
+  private int lensFacing = CameraSelector.LENS_FACING_BACK; // mobile - LENS_FACING_FRONT, pc - LENS_FACING_BACK
 
   private CameraSelector cameraSelector;
   private PermissionSupport permission;

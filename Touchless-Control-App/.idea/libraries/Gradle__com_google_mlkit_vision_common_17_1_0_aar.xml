@@ -5,6 +5,9 @@
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/575f420090490103ff6ba0d25b0a3578/transformed/jetified-vision-common-17.1.0/AndroidManifest.xml" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/575f420090490103ff6ba0d25b0a3578/transformed/jetified-vision-common-17.1.0/res" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/575f420090490103ff6ba0d25b0a3578/transformed/jetified-vision-common-17.1.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3494644f34f477ad8e9bc0c647152398/jetified-vision-common-17.1.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3494644f34f477ad8e9bc0c647152398/jetified-vision-common-17.1.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3494644f34f477ad8e9bc0c647152398/jetified-vision-common-17.1.0/res" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.mlkit/vision-common/17.1.0/94623971dca86f85b9f8a7fa2618e656b79336bc/vision-common-17.1.0-javadoc.jar!/" />

@@ -246,6 +246,7 @@ attr iconifiedByDefault
 attr imageAspectRatio
 attr imageAspectRatioAdjust
 attr imageButtonStyle
+attr implementationMode
 attr indeterminateProgressStyle
 attr initialActivityCount
 attr isLightTheme
@@ -609,6 +610,7 @@ color material_grey_600
 color material_grey_800
 color material_grey_850
 color material_grey_900
+color menu_gray
 color notification_action_color_filter
 color notification_icon_bg_color
 color primary_dark_material_dark
@@ -1031,6 +1033,7 @@ id checkbox
 id checked
 id chronometer
 id collapseActionView
+id compatible
 id content
 id contentPanel
 id cos
@@ -1133,6 +1136,7 @@ id parentRelative
 id path
 id pathRelative
 id percent
+id performance
 id position
 id postLayout
 id progress_circular
@@ -1831,7 +1835,7 @@ styleable OnClick clickAction targetId
 styleable OnSwipe dragDirection dragScale dragThreshold limitBoundsTo maxAcceleration maxVelocity moveWhenScrollAtTop nestedScrollFlags onTouchUp touchAnchorId touchAnchorSide touchRegionId
 styleable PopupWindow android_popupBackground android_popupAnimationStyle overlapAnchor
 styleable PopupWindowBackgroundState state_above_anchor
-styleable PreviewView scaleType
+styleable PreviewView implementationMode scaleType
 styleable PropertySet android_visibility android_alpha layout_constraintTag motionProgress visibilityMode
 styleable RecycleListView paddingBottomNoButtons paddingTopNoTitle
 styleable RecyclerView android_orientation android_clipToPadding android_descendantFocusability fastScrollEnabled fastScrollHorizontalThumbDrawable fastScrollHorizontalTrackDrawable fastScrollVerticalThumbDrawable fastScrollVerticalTrackDrawable layoutManager reverseLayout spanCount stackFromEnd

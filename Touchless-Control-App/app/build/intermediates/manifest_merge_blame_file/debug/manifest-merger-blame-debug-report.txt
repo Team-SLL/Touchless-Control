@@ -13,208 +13,208 @@
 13    APIs.
 14    -->
 15    <uses-sdk
-15-->D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:13:5-16:63
+15-->D:\mlkit\Touchless-Control-App\app\src\main\AndroidManifest.xml:13:5-16:63
 16        android:minSdkVersion="19"
-16-->D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:13:5-16:63
+16-->D:\mlkit\Touchless-Control-App\app\src\main\AndroidManifest.xml:13:5-16:63
 17        android:targetSdkVersion="31" />
-17-->D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:13:5-16:63
+17-->D:\mlkit\Touchless-Control-App\app\src\main\AndroidManifest.xml:13:5-16:63
 18
 19    <uses-feature android:name="android.hardware.camera" />
-19-->D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:18:5-59
-19-->D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:18:19-57
+19-->D:\mlkit\Touchless-Control-App\app\src\main\AndroidManifest.xml:18:5-59
+19-->D:\mlkit\Touchless-Control-App\app\src\main\AndroidManifest.xml:18:19-57
 20
 21    <uses-permission android:name="android.permission.INTERNET" />
-21-->D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:20:5-66
-21-->D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:20:22-64
+21-->D:\mlkit\Touchless-Control-App\app\src\main\AndroidManifest.xml:20:5-66
+21-->D:\mlkit\Touchless-Control-App\app\src\main\AndroidManifest.xml:20:22-64
 22    <uses-permission android:name="android.permission.MICROPHONE" />
-22-->D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:21:5-69
-22-->D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:21:22-66
+22-->D:\mlkit\Touchless-Control-App\app\src\main\AndroidManifest.xml:21:5-69
+22-->D:\mlkit\Touchless-Control-App\app\src\main\AndroidManifest.xml:21:22-66
 23    <uses-permission android:name="android.permission.RECORD_AUDIO" />
-23-->D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:22:5-71
-23-->D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:22:22-68
+23-->D:\mlkit\Touchless-Control-App\app\src\main\AndroidManifest.xml:22:5-71
+23-->D:\mlkit\Touchless-Control-App\app\src\main\AndroidManifest.xml:22:22-68
 24    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-24-->D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:23:5-80
-24-->D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:23:22-78
+24-->D:\mlkit\Touchless-Control-App\app\src\main\AndroidManifest.xml:23:5-80
+24-->D:\mlkit\Touchless-Control-App\app\src\main\AndroidManifest.xml:23:22-78
 25    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-25-->D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:24:5-79
-25-->D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:24:22-77
+25-->D:\mlkit\Touchless-Control-App\app\src\main\AndroidManifest.xml:24:5-79
+25-->D:\mlkit\Touchless-Control-App\app\src\main\AndroidManifest.xml:24:22-77
 26    <uses-permission android:name="android.permission.CAMERA" />
-26-->D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:25:5-64
-26-->D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:25:22-62
+26-->D:\mlkit\Touchless-Control-App\app\src\main\AndroidManifest.xml:25:5-64
+26-->D:\mlkit\Touchless-Control-App\app\src\main\AndroidManifest.xml:25:22-62
 27
 28    <queries>
-28-->D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:57:5-61:15
+28-->D:\mlkit\Touchless-Control-App\app\src\main\AndroidManifest.xml:57:5-61:15
 29        <intent>
-29-->D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:58:9-60:18
+29-->D:\mlkit\Touchless-Control-App\app\src\main\AndroidManifest.xml:58:9-60:18
 30            <action android:name="android.media.action.IMAGE_CAPTURE" />
-30-->D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:59:13-73
-30-->D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:59:21-70
+30-->D:\mlkit\Touchless-Control-App\app\src\main\AndroidManifest.xml:59:13-73
+30-->D:\mlkit\Touchless-Control-App\app\src\main\AndroidManifest.xml:59:21-70
 31        </intent>
 32    </queries>
 33    <queries>
-33-->D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:57:5-61:15
+33-->D:\mlkit\Touchless-Control-App\app\src\main\AndroidManifest.xml:57:5-61:15
 34        <intent>
-34-->D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:63:5-65:14
+34-->D:\mlkit\Touchless-Control-App\app\src\main\AndroidManifest.xml:63:5-65:14
 35            <action android:name="com.google.android.youtube.api.service.START" />
-35-->D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:64:9-79
-35-->D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:64:17-76
+35-->D:\mlkit\Touchless-Control-App\app\src\main\AndroidManifest.xml:64:9-79
+35-->D:\mlkit\Touchless-Control-App\app\src\main\AndroidManifest.xml:64:17-76
 36        </intent>
 37    </queries>
 38    <queries>
-38-->D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:57:5-61:15
+38-->D:\mlkit\Touchless-Control-App\app\src\main\AndroidManifest.xml:57:5-61:15
 39        <intent>
-39-->D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:68:9-70:18
+39-->D:\mlkit\Touchless-Control-App\app\src\main\AndroidManifest.xml:68:9-70:18
 40            <action android:name="android.speech.RecognitionService" />
-40-->D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:69:13-72
-40-->D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:69:21-69
+40-->D:\mlkit\Touchless-Control-App\app\src\main\AndroidManifest.xml:69:13-72
+40-->D:\mlkit\Touchless-Control-App\app\src\main\AndroidManifest.xml:69:21-69
 41        </intent>
 42    </queries>
 43    <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
 44    <!-- <uses-sdk android:minSdkVersion="14"/> -->
 45    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-45-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\arist\.gradle\caches\transforms-3\08c4cef49f7a1ad6ec74d8908dd2c993\transformed\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:25:5-79
-45-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\arist\.gradle\caches\transforms-3\08c4cef49f7a1ad6ec74d8908dd2c993\transformed\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:25:22-76
+45-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\User\.gradle\caches\transforms-2\files-2.1\412ef946a6159977a72e94ad72095069\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:25:5-79
+45-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\User\.gradle\caches\transforms-2\files-2.1\412ef946a6159977a72e94ad72095069\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:25:22-76
 46
 47    <application
-47-->D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:27:5-56:19
+47-->D:\mlkit\Touchless-Control-App\app\src\main\AndroidManifest.xml:27:5-56:19
 48        android:name="androidx.multidex.MultiDexApplication"
-48-->D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:28:9-61
+48-->D:\mlkit\Touchless-Control-App\app\src\main\AndroidManifest.xml:28:9-61
 49        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-49-->[androidx.core:core:1.3.2] C:\Users\arist\.gradle\caches\transforms-3\b061c321d5e1c59bd537eb0a5eed02ad\transformed\core-1.3.2\AndroidManifest.xml:24:18-86
+49-->[androidx.core:core:1.3.2] C:\Users\User\.gradle\caches\transforms-2\files-2.1\f49f58b7ecb9a68bce40f2f295bb871c\core-1.3.2\AndroidManifest.xml:24:18-86
 50        android:debuggable="true"
 51        android:icon="@drawable/logo_mlkit"
-51-->D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:29:9-44
+51-->D:\mlkit\Touchless-Control-App\app\src\main\AndroidManifest.xml:29:9-44
 52        android:label="@string/app_name"
-52-->D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:30:9-41
+52-->D:\mlkit\Touchless-Control-App\app\src\main\AndroidManifest.xml:30:9-41
 53        android:testOnly="true"
 54        android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-54-->D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:32:9-65
+54-->D:\mlkit\Touchless-Control-App\app\src\main\AndroidManifest.xml:32:9-65
 55        android:usesCleartextTraffic="true" >
-55-->D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:31:9-44
+55-->D:\mlkit\Touchless-Control-App\app\src\main\AndroidManifest.xml:31:9-44
 56        <meta-data
-56-->D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:34:9-36:68
+56-->D:\mlkit\Touchless-Control-App\app\src\main\AndroidManifest.xml:34:9-36:68
 57            android:name="com.teamSLL.android.gms.version"
-57-->D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:35:13-59
+57-->D:\mlkit\Touchless-Control-App\app\src\main\AndroidManifest.xml:35:13-59
 58            android:value="@integer/google_play_services_version" />
-58-->D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:36:13-66
+58-->D:\mlkit\Touchless-Control-App\app\src\main\AndroidManifest.xml:36:13-66
 59
 60        <!--
 61          Optional: Add it to automatically download ML model to device after
 62          your app is installed.
 63        -->
 64        <meta-data
-64-->D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:40:9-42:62
+64-->D:\mlkit\Touchless-Control-App\app\src\main\AndroidManifest.xml:40:9-42:62
 65            android:name="com.teamSLL.mlkit.DEPENDENCIES"
-65-->D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:41:13-58
+65-->D:\mlkit\Touchless-Control-App\app\src\main\AndroidManifest.xml:41:13-58
 66            android:value="barcode,face,ocr,ica,custom_ica" />
-66-->D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:42:13-60
+66-->D:\mlkit\Touchless-Control-App\app\src\main\AndroidManifest.xml:42:13-60
 67
 68        <activity
-68-->D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:45:9-54:20
+68-->D:\mlkit\Touchless-Control-App\app\src\main\AndroidManifest.xml:45:9-54:20
 69            android:name="com.teamSLL.mlkit.MainActivity"
-69-->D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:46:13-58
+69-->D:\mlkit\Touchless-Control-App\app\src\main\AndroidManifest.xml:46:13-58
 70            android:exported="true"
-70-->D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:47:13-36
+70-->D:\mlkit\Touchless-Control-App\app\src\main\AndroidManifest.xml:47:13-36
 71            android:screenOrientation="landscape"
-71-->D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:48:13-50
+71-->D:\mlkit\Touchless-Control-App\app\src\main\AndroidManifest.xml:48:13-50
 72            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
-72-->D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:49:13-69
+72-->D:\mlkit\Touchless-Control-App\app\src\main\AndroidManifest.xml:49:13-69
 73            <intent-filter>
-73-->D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:50:13-53:29
+73-->D:\mlkit\Touchless-Control-App\app\src\main\AndroidManifest.xml:50:13-53:29
 74                <action android:name="android.intent.action.MAIN" />
-74-->D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:51:17-68
-74-->D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:51:25-66
+74-->D:\mlkit\Touchless-Control-App\app\src\main\AndroidManifest.xml:51:17-68
+74-->D:\mlkit\Touchless-Control-App\app\src\main\AndroidManifest.xml:51:25-66
 75
 76                <category android:name="android.intent.category.LAUNCHER" />
-76-->D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:52:17-76
-76-->D:\andoird\youtube-touchless\Touchless-Control-App\app\src\main\AndroidManifest.xml:52:27-74
+76-->D:\mlkit\Touchless-Control-App\app\src\main\AndroidManifest.xml:52:17-76
+76-->D:\mlkit\Touchless-Control-App\app\src\main\AndroidManifest.xml:52:27-74
 77            </intent-filter>
 78        </activity>
 79
 80        <service
-80-->[com.google.android.gms:play-services-mlkit-face-detection:17.0.1] C:\Users\arist\.gradle\caches\transforms-3\b4466e5a88d217bd33b6c95da812ccbb\transformed\jetified-play-services-mlkit-face-detection-17.0.1\AndroidManifest.xml:9:9-15:19
+80-->[com.google.android.gms:play-services-mlkit-face-detection:17.0.1] C:\Users\User\.gradle\caches\transforms-2\files-2.1\1de3e9605aa6117fa0f7839039ba3551\jetified-play-services-mlkit-face-detection-17.0.1\AndroidManifest.xml:9:9-15:19
 81            android:name="com.google.mlkit.common.internal.MlKitComponentDiscoveryService"
-81-->[com.google.android.gms:play-services-mlkit-face-detection:17.0.1] C:\Users\arist\.gradle\caches\transforms-3\b4466e5a88d217bd33b6c95da812ccbb\transformed\jetified-play-services-mlkit-face-detection-17.0.1\AndroidManifest.xml:10:13-91
+81-->[com.google.android.gms:play-services-mlkit-face-detection:17.0.1] C:\Users\User\.gradle\caches\transforms-2\files-2.1\1de3e9605aa6117fa0f7839039ba3551\jetified-play-services-mlkit-face-detection-17.0.1\AndroidManifest.xml:10:13-91
 82            android:directBootAware="true"
-82-->[com.google.mlkit:common:18.1.0] C:\Users\arist\.gradle\caches\transforms-3\7cb714be3e11629367c224390940a7ce\transformed\jetified-common-18.1.0\AndroidManifest.xml:17:13-43
+82-->[com.google.mlkit:common:18.1.0] C:\Users\User\.gradle\caches\transforms-2\files-2.1\a61ea519345220f05e1095879185445e\jetified-common-18.1.0\AndroidManifest.xml:17:13-43
 83            android:exported="false" >
-83-->[com.google.android.gms:play-services-mlkit-face-detection:17.0.1] C:\Users\arist\.gradle\caches\transforms-3\b4466e5a88d217bd33b6c95da812ccbb\transformed\jetified-play-services-mlkit-face-detection-17.0.1\AndroidManifest.xml:11:13-37
+83-->[com.google.android.gms:play-services-mlkit-face-detection:17.0.1] C:\Users\User\.gradle\caches\transforms-2\files-2.1\1de3e9605aa6117fa0f7839039ba3551\jetified-play-services-mlkit-face-detection-17.0.1\AndroidManifest.xml:11:13-37
 84            <meta-data
-84-->[com.google.android.gms:play-services-mlkit-face-detection:17.0.1] C:\Users\arist\.gradle\caches\transforms-3\b4466e5a88d217bd33b6c95da812ccbb\transformed\jetified-play-services-mlkit-face-detection-17.0.1\AndroidManifest.xml:12:13-14:85
+84-->[com.google.android.gms:play-services-mlkit-face-detection:17.0.1] C:\Users\User\.gradle\caches\transforms-2\files-2.1\1de3e9605aa6117fa0f7839039ba3551\jetified-play-services-mlkit-face-detection-17.0.1\AndroidManifest.xml:12:13-14:85
 85                android:name="com.google.firebase.components:com.google.mlkit.vision.face.internal.FaceRegistrar"
-85-->[com.google.android.gms:play-services-mlkit-face-detection:17.0.1] C:\Users\arist\.gradle\caches\transforms-3\b4466e5a88d217bd33b6c95da812ccbb\transformed\jetified-play-services-mlkit-face-detection-17.0.1\AndroidManifest.xml:13:17-114
+85-->[com.google.android.gms:play-services-mlkit-face-detection:17.0.1] C:\Users\User\.gradle\caches\transforms-2\files-2.1\1de3e9605aa6117fa0f7839039ba3551\jetified-play-services-mlkit-face-detection-17.0.1\AndroidManifest.xml:13:17-114
 86                android:value="com.google.firebase.components.ComponentRegistrar" />
-86-->[com.google.android.gms:play-services-mlkit-face-detection:17.0.1] C:\Users\arist\.gradle\caches\transforms-3\b4466e5a88d217bd33b6c95da812ccbb\transformed\jetified-play-services-mlkit-face-detection-17.0.1\AndroidManifest.xml:14:17-82
+86-->[com.google.android.gms:play-services-mlkit-face-detection:17.0.1] C:\Users\User\.gradle\caches\transforms-2\files-2.1\1de3e9605aa6117fa0f7839039ba3551\jetified-play-services-mlkit-face-detection-17.0.1\AndroidManifest.xml:14:17-82
 87            <meta-data
-87-->[com.google.mlkit:vision-common:17.1.0] C:\Users\arist\.gradle\caches\transforms-3\575f420090490103ff6ba0d25b0a3578\transformed\jetified-vision-common-17.1.0\AndroidManifest.xml:12:13-14:85
+87-->[com.google.mlkit:vision-common:17.1.0] C:\Users\User\.gradle\caches\transforms-2\files-2.1\3494644f34f477ad8e9bc0c647152398\jetified-vision-common-17.1.0\AndroidManifest.xml:12:13-14:85
 88                android:name="com.google.firebase.components:com.google.mlkit.vision.common.internal.VisionCommonRegistrar"
-88-->[com.google.mlkit:vision-common:17.1.0] C:\Users\arist\.gradle\caches\transforms-3\575f420090490103ff6ba0d25b0a3578\transformed\jetified-vision-common-17.1.0\AndroidManifest.xml:13:17-124
+88-->[com.google.mlkit:vision-common:17.1.0] C:\Users\User\.gradle\caches\transforms-2\files-2.1\3494644f34f477ad8e9bc0c647152398\jetified-vision-common-17.1.0\AndroidManifest.xml:13:17-124
 89                android:value="com.google.firebase.components.ComponentRegistrar" />
-89-->[com.google.mlkit:vision-common:17.1.0] C:\Users\arist\.gradle\caches\transforms-3\575f420090490103ff6ba0d25b0a3578\transformed\jetified-vision-common-17.1.0\AndroidManifest.xml:14:17-82
+89-->[com.google.mlkit:vision-common:17.1.0] C:\Users\User\.gradle\caches\transforms-2\files-2.1\3494644f34f477ad8e9bc0c647152398\jetified-vision-common-17.1.0\AndroidManifest.xml:14:17-82
 90            <meta-data
-90-->[com.google.mlkit:common:18.1.0] C:\Users\arist\.gradle\caches\transforms-3\7cb714be3e11629367c224390940a7ce\transformed\jetified-common-18.1.0\AndroidManifest.xml:20:13-22:85
+90-->[com.google.mlkit:common:18.1.0] C:\Users\User\.gradle\caches\transforms-2\files-2.1\a61ea519345220f05e1095879185445e\jetified-common-18.1.0\AndroidManifest.xml:20:13-22:85
 91                android:name="com.google.firebase.components:com.google.mlkit.common.internal.CommonComponentRegistrar"
-91-->[com.google.mlkit:common:18.1.0] C:\Users\arist\.gradle\caches\transforms-3\7cb714be3e11629367c224390940a7ce\transformed\jetified-common-18.1.0\AndroidManifest.xml:21:17-120
+91-->[com.google.mlkit:common:18.1.0] C:\Users\User\.gradle\caches\transforms-2\files-2.1\a61ea519345220f05e1095879185445e\jetified-common-18.1.0\AndroidManifest.xml:21:17-120
 92                android:value="com.google.firebase.components.ComponentRegistrar" />
-92-->[com.google.mlkit:common:18.1.0] C:\Users\arist\.gradle\caches\transforms-3\7cb714be3e11629367c224390940a7ce\transformed\jetified-common-18.1.0\AndroidManifest.xml:22:17-82
+92-->[com.google.mlkit:common:18.1.0] C:\Users\User\.gradle\caches\transforms-2\files-2.1\a61ea519345220f05e1095879185445e\jetified-common-18.1.0\AndroidManifest.xml:22:17-82
 93        </service>
 94
 95        <provider
-95-->[com.google.mlkit:common:18.1.0] C:\Users\arist\.gradle\caches\transforms-3\7cb714be3e11629367c224390940a7ce\transformed\jetified-common-18.1.0\AndroidManifest.xml:9:9-13:38
+95-->[com.google.mlkit:common:18.1.0] C:\Users\User\.gradle\caches\transforms-2\files-2.1\a61ea519345220f05e1095879185445e\jetified-common-18.1.0\AndroidManifest.xml:9:9-13:38
 96            android:name="com.google.mlkit.common.internal.MlKitInitProvider"
-96-->[com.google.mlkit:common:18.1.0] C:\Users\arist\.gradle\caches\transforms-3\7cb714be3e11629367c224390940a7ce\transformed\jetified-common-18.1.0\AndroidManifest.xml:10:13-78
+96-->[com.google.mlkit:common:18.1.0] C:\Users\User\.gradle\caches\transforms-2\files-2.1\a61ea519345220f05e1095879185445e\jetified-common-18.1.0\AndroidManifest.xml:10:13-78
 97            android:authorities="com.teamSLL.mlkit.mlkitinitprovider"
-97-->[com.google.mlkit:common:18.1.0] C:\Users\arist\.gradle\caches\transforms-3\7cb714be3e11629367c224390940a7ce\transformed\jetified-common-18.1.0\AndroidManifest.xml:11:13-69
+97-->[com.google.mlkit:common:18.1.0] C:\Users\User\.gradle\caches\transforms-2\files-2.1\a61ea519345220f05e1095879185445e\jetified-common-18.1.0\AndroidManifest.xml:11:13-69
 98            android:exported="false"
-98-->[com.google.mlkit:common:18.1.0] C:\Users\arist\.gradle\caches\transforms-3\7cb714be3e11629367c224390940a7ce\transformed\jetified-common-18.1.0\AndroidManifest.xml:12:13-37
+98-->[com.google.mlkit:common:18.1.0] C:\Users\User\.gradle\caches\transforms-2\files-2.1\a61ea519345220f05e1095879185445e\jetified-common-18.1.0\AndroidManifest.xml:12:13-37
 99            android:initOrder="99" />
-99-->[com.google.mlkit:common:18.1.0] C:\Users\arist\.gradle\caches\transforms-3\7cb714be3e11629367c224390940a7ce\transformed\jetified-common-18.1.0\AndroidManifest.xml:13:13-35
+99-->[com.google.mlkit:common:18.1.0] C:\Users\User\.gradle\caches\transforms-2\files-2.1\a61ea519345220f05e1095879185445e\jetified-common-18.1.0\AndroidManifest.xml:13:13-35
 100
 101        <activity
-101-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\arist\.gradle\caches\transforms-3\5186dcb3a690dada06c2489615e2b64f\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
+101-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\User\.gradle\caches\transforms-2\files-2.1\1f7756178d7399644d13d0558344f414\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
 102            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-102-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\arist\.gradle\caches\transforms-3\5186dcb3a690dada06c2489615e2b64f\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:19-85
+102-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\User\.gradle\caches\transforms-2\files-2.1\1f7756178d7399644d13d0558344f414\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:19-85
 103            android:exported="false"
-103-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\arist\.gradle\caches\transforms-3\5186dcb3a690dada06c2489615e2b64f\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:22:19-43
+103-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\User\.gradle\caches\transforms-2\files-2.1\1f7756178d7399644d13d0558344f414\jetified-play-services-base-18.0.1\AndroidManifest.xml:22:19-43
 104            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-104-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\arist\.gradle\caches\transforms-3\5186dcb3a690dada06c2489615e2b64f\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:21:19-78
+104-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\User\.gradle\caches\transforms-2\files-2.1\1f7756178d7399644d13d0558344f414\jetified-play-services-base-18.0.1\AndroidManifest.xml:21:19-78
 105
 106        <meta-data
-106-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\arist\.gradle\caches\transforms-3\7d253d92a4687f43dd99f3353620f51d\transformed\jetified-play-services-basement-18.0.0\AndroidManifest.xml:21:9-23:69
+106-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\User\.gradle\caches\transforms-2\files-2.1\911348e7fc6aafc5c9cf566aaa4f6f48\jetified-play-services-basement-18.0.0\AndroidManifest.xml:21:9-23:69
 107            android:name="com.google.android.gms.version"
-107-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\arist\.gradle\caches\transforms-3\7d253d92a4687f43dd99f3353620f51d\transformed\jetified-play-services-basement-18.0.0\AndroidManifest.xml:22:13-58
+107-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\User\.gradle\caches\transforms-2\files-2.1\911348e7fc6aafc5c9cf566aaa4f6f48\jetified-play-services-basement-18.0.0\AndroidManifest.xml:22:13-58
 108            android:value="@integer/google_play_services_version" />
-108-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\arist\.gradle\caches\transforms-3\7d253d92a4687f43dd99f3353620f51d\transformed\jetified-play-services-basement-18.0.0\AndroidManifest.xml:23:13-66
+108-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\User\.gradle\caches\transforms-2\files-2.1\911348e7fc6aafc5c9cf566aaa4f6f48\jetified-play-services-basement-18.0.0\AndroidManifest.xml:23:13-66
 109
 110        <service
-110-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\arist\.gradle\caches\transforms-3\08c4cef49f7a1ad6ec74d8908dd2c993\transformed\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:29:9-35:19
+110-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\User\.gradle\caches\transforms-2\files-2.1\412ef946a6159977a72e94ad72095069\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:29:9-35:19
 111            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
-111-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\arist\.gradle\caches\transforms-3\08c4cef49f7a1ad6ec74d8908dd2c993\transformed\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:30:13-103
+111-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\User\.gradle\caches\transforms-2\files-2.1\412ef946a6159977a72e94ad72095069\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:30:13-103
 112            android:exported="false" >
-112-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\arist\.gradle\caches\transforms-3\08c4cef49f7a1ad6ec74d8908dd2c993\transformed\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:31:13-37
+112-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\User\.gradle\caches\transforms-2\files-2.1\412ef946a6159977a72e94ad72095069\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:31:13-37
 113            <meta-data
-113-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\arist\.gradle\caches\transforms-3\08c4cef49f7a1ad6ec74d8908dd2c993\transformed\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:32:13-34:39
+113-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\User\.gradle\caches\transforms-2\files-2.1\412ef946a6159977a72e94ad72095069\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:32:13-34:39
 114                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
-114-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\arist\.gradle\caches\transforms-3\08c4cef49f7a1ad6ec74d8908dd2c993\transformed\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:33:17-94
+114-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\User\.gradle\caches\transforms-2\files-2.1\412ef946a6159977a72e94ad72095069\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:33:17-94
 115                android:value="cct" />
-115-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\arist\.gradle\caches\transforms-3\08c4cef49f7a1ad6ec74d8908dd2c993\transformed\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:34:17-36
+115-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\User\.gradle\caches\transforms-2\files-2.1\412ef946a6159977a72e94ad72095069\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:34:17-36
 116        </service>
 117        <service
-117-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\arist\.gradle\caches\transforms-3\509cece00d965090428fe9b479893946\transformed\jetified-transport-runtime-2.2.6\AndroidManifest.xml:26:9-30:19
+117-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\User\.gradle\caches\transforms-2\files-2.1\7e1120246c6e010907701b551401f7f6\jetified-transport-runtime-2.2.6\AndroidManifest.xml:26:9-30:19
 118            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
-118-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\arist\.gradle\caches\transforms-3\509cece00d965090428fe9b479893946\transformed\jetified-transport-runtime-2.2.6\AndroidManifest.xml:27:13-117
+118-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\User\.gradle\caches\transforms-2\files-2.1\7e1120246c6e010907701b551401f7f6\jetified-transport-runtime-2.2.6\AndroidManifest.xml:27:13-117
 119            android:exported="false"
-119-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\arist\.gradle\caches\transforms-3\509cece00d965090428fe9b479893946\transformed\jetified-transport-runtime-2.2.6\AndroidManifest.xml:28:13-37
+119-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\User\.gradle\caches\transforms-2\files-2.1\7e1120246c6e010907701b551401f7f6\jetified-transport-runtime-2.2.6\AndroidManifest.xml:28:13-37
 120            android:permission="android.permission.BIND_JOB_SERVICE" >
-120-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\arist\.gradle\caches\transforms-3\509cece00d965090428fe9b479893946\transformed\jetified-transport-runtime-2.2.6\AndroidManifest.xml:29:13-69
+120-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\User\.gradle\caches\transforms-2\files-2.1\7e1120246c6e010907701b551401f7f6\jetified-transport-runtime-2.2.6\AndroidManifest.xml:29:13-69
 121        </service>
 122
 123        <receiver
-123-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\arist\.gradle\caches\transforms-3\509cece00d965090428fe9b479893946\transformed\jetified-transport-runtime-2.2.6\AndroidManifest.xml:32:9-34:40
+123-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\User\.gradle\caches\transforms-2\files-2.1\7e1120246c6e010907701b551401f7f6\jetified-transport-runtime-2.2.6\AndroidManifest.xml:32:9-34:40
 124            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
-124-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\arist\.gradle\caches\transforms-3\509cece00d965090428fe9b479893946\transformed\jetified-transport-runtime-2.2.6\AndroidManifest.xml:33:13-132
+124-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\User\.gradle\caches\transforms-2\files-2.1\7e1120246c6e010907701b551401f7f6\jetified-transport-runtime-2.2.6\AndroidManifest.xml:33:13-132
 125            android:exported="false" />
-125-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\arist\.gradle\caches\transforms-3\509cece00d965090428fe9b479893946\transformed\jetified-transport-runtime-2.2.6\AndroidManifest.xml:34:13-37
+125-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\User\.gradle\caches\transforms-2\files-2.1\7e1120246c6e010907701b551401f7f6\jetified-transport-runtime-2.2.6\AndroidManifest.xml:34:13-37
 126    </application>
 127
 128</manifest>

@@ -12,25 +12,28 @@
             android:layout_height="match_parent"
             android:background="@drawable/round_left"
             android:orientation="vertical">
+
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/line">
+
                 <TextView
                     android:id="@+id/textView_main"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/setting_title_margin"
+                    android:fontFamily="@font/nexonlv1bold"
                     android:text="메인화면 동작"
-                    android:textColor="@color/text1"
-                    android:fontFamily="@font/nexonlv1bold"/>
+                    android:textColor="@color/text1" />
             </LinearLayout>
 
 
             <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:background="@color/menu_gray">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -158,24 +161,26 @@
                 </LinearLayout>
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/line">
+
                 <TextView
                     android:id="@+id/textView_video"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
+                    android:fontFamily="@font/nexonlv1bold"
                     android:text="동영상 재생중 화면"
-                    android:textColor="@color/text1"
-                    android:fontFamily="@font/nexonlv1bold"/>
+                    android:textColor="@color/text1" />
             </LinearLayout>
 
 
             <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                android:background="@color/menu_gray">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -239,26 +244,28 @@
                     </LinearLayout>
                 </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:background="@drawable/line">
-            <TextView
-                android:id="@+id/textView_search"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:text="검색중 동작"
-                android:textColor="@color/text1"
-                android:fontFamily="@font/nexonlv1bold"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/line">
 
-        </LinearLayout>
+                <TextView
+                    android:id="@+id/textView_search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/nexonlv1bold"
+                    android:text="검색중 동작"
+                    android:textColor="@color/text1" />
+
+            </LinearLayout>
 
 
             <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                android:background="@color/menu_gray">
 
 
                     <LinearLayout
@@ -296,7 +303,7 @@
 
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/line">
 
@@ -315,7 +322,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:background="@color/menu_gray">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -441,7 +449,7 @@
                         android:layout_weight="1"
                         android:text="Cancel"
                         android:background="@drawable/round_buttonstrok"
-                        android:textColor="@color/darkgreen"
+                        android:textColor="@color/text2"
                         android:layout_margin="5dp"
                         android:fontFamily="@font/nexonlv1bold"/>
 
@@ -452,7 +460,7 @@
                         android:layout_weight="1"
                         android:text="RESET"
                         android:background="@drawable/round_buttonstrok"
-                        android:textColor="@color/darkgreen"
+                        android:textColor="@color/text2"
                         android:layout_margin="5dp"
                         android:fontFamily="@font/nexonlv1bold"/>
 
@@ -463,7 +471,7 @@
                         android:layout_weight="1"
                         android:text="Save"
                         android:background="@drawable/round_buttonstrok"
-                        android:textColor="@color/darkgreen"
+                        android:textColor="@color/text2"
                         android:layout_margin="5dp"
                         android:fontFamily="@font/nexonlv1bold"/>
 

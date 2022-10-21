@@ -27,6 +27,7 @@
     <color name="Beige">#D9CEC6</color>
     <color name="backwhite">#F5F5F5</color>
     <color name="black">#000000</color>
+    <color name="menu_gray">#F5F5F5</color>
 
 
 </resources>

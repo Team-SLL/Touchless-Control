@@ -5,6 +5,9 @@
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/0b942307fd6c42300ce5c901dc977989/transformed/jetified-vision-interfaces-16.0.0/AndroidManifest.xml" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/0b942307fd6c42300ce5c901dc977989/transformed/jetified-vision-interfaces-16.0.0/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/0b942307fd6c42300ce5c901dc977989/transformed/jetified-vision-interfaces-16.0.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/087068a34021cdba64e778289cf33765/jetified-vision-interfaces-16.0.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/087068a34021cdba64e778289cf33765/jetified-vision-interfaces-16.0.0/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/087068a34021cdba64e778289cf33765/jetified-vision-interfaces-16.0.0/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.mlkit/vision-interfaces/16.0.0/745e6911e713b86e7e0548dac2a61a0c595faab/vision-interfaces-16.0.0-javadoc.jar!/" />

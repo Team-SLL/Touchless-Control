@@ -45,6 +45,7 @@ public class UI {
     public static final short SEARCH_OPEN = 7;
     public static final short SEARCH_CLOSE = 8;
     public static final short CLOSE_APP = 127;
+    public short CAMERA_SHOW = 0;   // 2022-10-17 카메라 온오프
 
     // youtube UI items
     private Activity activity;
@@ -63,8 +64,10 @@ public class UI {
     private ImageButton micoffBtn;
     private ImageButton homeBtn;
     private ImageButton searchBtn;
+    private ImageButton cameraBtn;  // 2022-10-17 카메라 온오프
 
     private LinearLayout loading;
+    private LinearLayout camera_view; // 2022-10-17 카메라 온오프
 
     private SpeechToText stt;
     private SpeechRecognizer speechRecognizer;
@@ -82,6 +85,7 @@ public class UI {
         this.context = context;
 
         this.loading = activity.findViewById(R.id.loading);
+
         this.settingBtn = activity.findViewById(R.id.setting_button);   //이미지 버튼 연결
         this.settingLayout = (DrawerLayout) activity.findViewById(R.id.drawer);
         this.micoffBtn = activity.findViewById(R.id.micoff_button);
@@ -92,6 +96,12 @@ public class UI {
         this.searchView = activity.findViewById(R.id.search_view);
         searchView.setVisibility(View.INVISIBLE);
         miconBtn.setVisibility(View.GONE);  //음섬 인식 비활성화
+
+
+        this.camera_view = activity.findViewById(R.id.camera_view);   // 2022-10-17 카메라 온오프
+        this.cameraBtn = activity.findViewById(R.id.camera_button);  // 2022-10-17 카메라 온오프
+        camera_view.setVisibility(View.INVISIBLE);   // 2022-10-17 카메라 온오프    카메라 안보이게 초기화
+
 
         settingLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED);
         settingBtn.setOnClickListener(new View.OnClickListener() {
@@ -149,6 +159,22 @@ public class UI {
             }
         });
 
+        cameraBtn.setOnClickListener(new View.OnClickListener() {  // 2022-10-17 카메라 온오프
+            @Override
+            public void onClick(View v) {
+                if(CAMERA_SHOW == 0){
+                    cameraBtn.setBackgroundResource(R.drawable.round_button_click);
+                    camera_view.setVisibility(View.VISIBLE);
+                    CAMERA_SHOW = 1;
+                }
+                else if(CAMERA_SHOW == 1){
+                    cameraBtn.setBackgroundResource(R.drawable.round_button);
+                    camera_view.setVisibility(View.INVISIBLE);
+                    CAMERA_SHOW = 0;
+                }
+
+            }
+        });
 
         // 유튜브 영상을 재생할 프레그먼트
         YouTubePlayerFragment youtubePlayerFragment = (YouTubePlayerFragment) activity.getFragmentManager().findFragmentById(R.id.youtube_player_fragment); //유튜브 재생 프래그먼트, 유튜브 영상 재생용

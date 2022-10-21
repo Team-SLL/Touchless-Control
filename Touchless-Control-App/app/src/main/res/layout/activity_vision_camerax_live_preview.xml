@@ -1,52 +1,234 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-  <LinearLayout
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:orientation="horizontal"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.0"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent"
-      app:layout_constraintVertical_bias="1.0">
-
-    <com.teamSLL.mlkit.camera.GraphicOverlay
-        android:id="@+id/graphic_overlay"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:visibility="visible" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:text="TextView"
-        android:textColor="@android:color/black"
-        android:textSize="30sp" />
-
-  </LinearLayout>
 
   <LinearLayout
       android:id="@+id/linearLayout"
       android:layout_width="match_parent"
       android:layout_height="match_parent"
-      android:orientation="vertical">
+      android:orientation="horizontal"
+      android:background="@color/backwhite">
+    <FrameLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
 
-    <SearchView
-        android:id="@+id/search_view"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        app:searchIcon="@drawable/ic_search"
-        android:background="#D66666" />
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="49dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight ="5dp"
+            android:background="@drawable/round_menu"
+            android:orientation="vertical"
+            android:paddingLeft="5dp"
+            android:paddingTop="10dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="10dp">
+          <Space
+              android:layout_width="0dp"
+              android:layout_height="0dp"
+              android:layout_weight="1"/>
+          <ImageButton
+              android:id="@+id/home_button"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
+              android:layout_margin="5dp"
+              android:background="@drawable/round_button_click"
+              android:padding="5dp"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toTopOf="parent"
+              app:srcCompat="@drawable/ic_home" />
+          <Space
+              android:layout_width="0dp"
+              android:layout_height="0dp"
+              android:layout_weight="1"/>
+          <ImageButton
+              android:id="@+id/search_button"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
+              android:layout_margin="5dp"
+              android:background="@drawable/round_button"
+              android:padding="5dp"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toTopOf="parent"
+              app:srcCompat="@drawable/ic_search" />
+          <Space
+              android:layout_width="0dp"
+              android:layout_height="0dp"
+              android:layout_weight="1"/>
+          <LinearLayout
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center">
+
+            <ImageButton
+                android:id="@+id/micoff_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/round_button"
+                android:padding="5dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_mic_off" />
+
+            <ImageButton
+                android:id="@+id/micon_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/round_button_click"
+                android:padding="5dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_mic_on" />
+          </LinearLayout>
+
+          <Space
+              android:layout_width="0dp"
+              android:layout_height="0dp"
+              android:layout_weight="1"/>
+
+          <ImageButton
+              android:id="@+id/setting_button"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
+              android:layout_margin="5dp"
+              android:background="@drawable/round_button"
+              android:padding="5dp"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toTopOf="parent"
+              app:srcCompat="@drawable/ic_settings"
+              tools:ignore="TouchTargetSizeCheck" />
+          <Space
+              android:layout_width="0dp"
+              android:layout_height="0dp"
+              android:layout_weight="1"/>
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="3dp"
+            android:background="@drawable/round_left"
+            android:orientation="vertical">
+
+          <FrameLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvVideos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <LinearLayout
+                android:id="@+id/loading"
+                android:layout_width="234dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:layout_weight="1"
+                android:background="@color/backwhite"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="invisible">
+
+              <ImageView
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center"
+                  android:layout_marginBottom="5dp"
+                  android:src="@drawable/progress_image" />
+
+              <TextView
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:fontFamily="@font/nexonlv1bold"
+                  android:gravity="center"
+                  android:text="Loading..."
+                  android:textAlignment="center"
+                  android:textSize="16dp" />
+            </LinearLayout>
+
+          </FrameLayout>
+
+          <SearchView
+              android:id="@+id/search_view"
+              android:layout_width="300dp"
+              android:layout_height="40dp"
+              android:layout_marginTop="20dp"
+              android:background="@drawable/round_search"
+              android:fontFamily="@font/nexonlv1regular"
+              android:iconifiedByDefault="false"
+              android:queryBackground="@null"
+              app:searchIcon="@drawable/ic_search">
+
+          </SearchView>
+
+          <LinearLayout
+              android:layout_width="388dp"
+              android:layout_height="180dp"
+              android:layout_marginStart="100dp"
+              android:layout_marginLeft="0dp"
+              android:layout_marginTop="230dp"
+              android:layout_marginEnd="531dp"
+              android:layout_marginBottom="11dp"
+              android:gravity="bottom|center|center_vertical"
+              android:visibility="visible">
+
+            <ImageButton
+                android:id="@+id/camera_button"
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+
+            <LinearLayout
+                android:id="@+id/camera_view"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="bottom"
+                android:orientation="horizontal">
+
+              <com.teamSLL.mlkit.camera.GraphicOverlay
+                  android:id="@+id/graphic_overlay"
+                  android:layout_width="150dp"
+                  android:layout_height="150dp"
+                  android:visibility="visible" />
+
+              <TextView
+                  android:id="@+id/textView"
+                  android:layout_width="150dp"
+                  android:layout_height="wrap_content"
+                  android:gravity="center"
+                  android:textColor="@android:color/black"
+                  android:textSize="14sp" />
+            </LinearLayout>
+
+          </LinearLayout>
+
+
+        </FrameLayout>
+
+
+      </LinearLayout>
+
+    </FrameLayout>
+
+
+
 
     <fragment
         android:id="@+id/youtube_player_fragment"
@@ -54,13 +236,6 @@
         android:layout_width="0dp"
         android:layout_height="0dp" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvVideos"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-    </androidx.recyclerview.widget.RecyclerView>
-
   </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

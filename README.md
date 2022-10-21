@@ -7,8 +7,6 @@
 - [2022-01 : 01-03 캡스톤디자인 문서](https://space.malangmalang.com/open?fileId=m:0:1041409819&lang=ko)           
 - [깃허브](https://github.com/Team-SLL/Touchless-Control)                    
 
-add
-
 #### 팀원
 
 2016039085 박시현        

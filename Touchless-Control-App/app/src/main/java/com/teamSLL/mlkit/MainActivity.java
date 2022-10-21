@@ -255,7 +255,32 @@ public final class MainActivity extends AppCompatActivity {
 
                 int screen = ui.isFullScreen ? 1 : (imm.isFullscreenMode() ? 2 : 0);
                 ui.use(motionToUI.get(screen).get(result));
-                tv.setText(Integer.toString(result));
+                switch(result){
+                  case 1:
+                    tv.setText("HEAD_UP");
+                    break;
+                  case 2:
+                    tv.setText("HEAD_DOWN");
+                    break;
+                  case 3:
+                    tv.setText("HEAD_LEFT");
+                    break;
+                  case 4:
+                    tv.setText("HEAD_RIGHT");
+                    break;
+                  case 5:
+                    tv.setText("MOUTH_OPEN");
+                    break;
+                  case 6:
+                    tv.setText("EYE_CLOSED_SHORT");
+                    break;
+                  case 7:
+                    tv.setText("EYE_CLOSED_LONG");
+                    break;
+                  default:
+                    tv.setText("");
+                    break;
+                }
 
 
               } catch (MlKitException e) {

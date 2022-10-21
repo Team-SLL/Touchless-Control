@@ -1,83 +1,43 @@
-# ML Kit Vision Quickstart Sample App
+# Touchless-Control
 
-## Introduction
+> ML Kit의 Face Detection 기술을 활용한 Touchless 모바일 제어 기술          
+> Touchless YouTube application using ML KIT‘s Face Detection.
 
-This ML Kit Quickstart app demonstrates how to use and integrate various vision based ML Kit features into your app.
+- [2021-02 : 01-03 산학프로젝트 문서](https://space.malangmalang.com/open?fileId=m:0:944584451&lang=ko)      
+- [2022-01 : 01-03 캡스톤디자인 문서](https://space.malangmalang.com/open?fileId=m:0:1041409819&lang=ko)           
+- [깃허브](https://github.com/Team-SLL/Touchless-Control)                    
 
-## Feature List
+#### 팀원
 
-Features that are included in this Quickstart app:
-* [Object Detection](https://developers.google.com/ml-kit/vision/object-detection/android) - Detect, track, and classify objects in real time and static images
-* [Face Detection](https://developers.google.com/ml-kit/vision/face-detection/android) - Detect faces in real time and static images
-* [Text Recognition](https://developers.google.com/ml-kit/vision/text-recognition/android) - Recognize text in real time and static images
-* [Barcode Scanning](https://developers.google.com/ml-kit/vision/barcode-scanning/android)  - Scan barcodes in real time and static images
-* [Image Labeling](https://developers.google.com/ml-kit/vision/image-labeling/android) - Label images in real time and static images
-* [Custom Image Labeling - Birds](https://developers.google.com/ml-kit/vision/image-labeling/custom-models/android) - Label images of birds with a custom TensorFlow Lite model.
-* [Pose Detection](https://developers.google.com/ml-kit/vision/pose-detection/android) - Detect the position of the human body in real time.
-* [Selfie Segmentation](https://developers.google.com/ml-kit/vision/selfie-segmentation/android) - Segment people from the background in real time.
+2016039085 박시현        
+2018068005 전아현            
+2019038037 이하은         
 
-<img src="../screenshots/quickstart-picker.png" width="220"/> <img src="../screenshots/quickstart-image-labeling.png" width="220"/> <img src="../screenshots/quickstart-object-detection.png" width="220"/> <img src="../screenshots/quickstart-pose-detection.png" width="220"/>
+#### 지도교수
 
-## Getting Started
+이종연 교수님
 
-* Run the sample code on your Android device or emulator
-* Try extending the code to add new features and functionality
+## 주요 기술
 
-## How to use the app
+> ML KIT의 Face Detection API를 활용한 애플리케이션으로, 동영상 목록 및 재생 등의 환경에서 얼굴 움직임만으로 모든 조작이 가능한 애플리케이션.
 
-This app supports three usage scenarios: Live Camera, Static Image, and CameraX enabled live camera.
+1. 유튜브 API를 통해 인기 동영상 및 검색한 동영상 목록을 제공한다.
+2. 얼굴 움직임을 통해 동영상 선택, 재생, 일시 중지, 종료, 검색 등의 조작이 가능하다.
+3. 검색은 키보드 뿐 아니라 음성을 통해서도 가능하다.
+4. 얼굴 움직임을 사용자가 원하는 설정으로 변경 가능하다.
+  - ex) 왼쪽 고갯짓이 기본 설정은 왼쪽 동영상으로 이동이지만, 오른쪽 동영상으로 이동 등으로 변경 가능하다.
+5. 주 기능은 얼굴 인식을 통한 화면 제어이지만, 부 기능으로 얼굴을 인식하지 못하는 상황 등을 위해 음성을 통해 화면을 조작할 수 있는 기능 제공('재생'이라고 말할 시 동영상 재생 등)
 
-### Live Camera scenario
-It uses the camera preview as input and contains these API workflows: Object detection & tracking, Face Detection, Text Recognition, Barcode Scanning, Image Labeling, and Pose Detection. There's also a settings page that allows you to configure several options:
-* Camera
-    * Preview size - Specify the preview size of rear/front camera manually (Default size is chosen appropriately based on screen size)
-    * Enable live viewport - Toggle between blocking camera preview by API processing and result rendering or not
-* Object detection / Custom Object Detection
-    * Enable multiple objects -- Enable multiple objects to be detected at once
-    * Enable classification -- Enable classification for each detected object
-* Face Detection
-    * Landmark mode -- Toggle between showing no or all facial landmarks
-    * Contour mode -- Toggle between showing no or all contours
-    * Classification mode -- Toggle between showing no or all classifications (smiling, eyes open/closed)
-    * Performance mode -- Toggle between two operating modes (Fast or Accurate)
-    * Face tracking -- Enable or disable face tracking
-    * Minimum face size -- Choose the proportion of the head width to the image width
-* Pose Detection
-    * Performance mode -- Allows you to switch between "Fast" and "Accurate" operation mode
-    * Show in-frame likelihood -- Displays InFrameLikelihood score for each landmark
-    * Visualize z value -- Uses different colors to indicate z difference (red: smaller z, blue: larger z)
-    * Rescale z value for visualization -- Maps the smallest z value to the most red and the largest z value to the most blue. This makes z difference more obvious
-    * Run classification -- Classify squat and pushup poses. Count reps in streaming mode.
-* Selfie Segmentation
-    * Enable raw size mask -- Asks the segmenter to return the raw size mask which matches the model output size.
+## 패키지 설명
 
-### Static Image scenario
-The static image scenario is identical to the live camera scenario, but instead relies on images fed into the app through the gallery.
+- camera : 전면 카메라를 통해 영상을 가져오고, 해당 영상을 가공해 화면에 출력할 수 있게 하는 패키지
+- facedetector : 영상에서 얼굴정보를 추출해 랜드마크 좌표를 출력하고, 해당 좌표를 이용해 얼굴이 어떤 움직임을 하는지 계산하는 패키지
+- preference : 얼굴 인식을 위해 기본 설정을 셋팅, 저장 하는 유틸리티 패키지
+- screen : 화면에 출력되는 모든 정보를 가진 패키지
+- STT : 음성을 텍스트로 변환하는 패키지
+- youtube : 유튜브에서 인기동영상 및 검색 동영상을 가져오는 패키지
 
-### CameraX Live Preview scenario
-The CameraX live preview scenario is very similar to the native live camera scenario, but instead relies on CameraX live preview. Note: CameraX is only supported on API level 21+.
 
-## Support
-
-* [Documentation](https://developers.google.com/ml-kit/guides)
-* [API Reference](https://developers.google.com/ml-kit/reference/android)
-* [Stack Overflow](https://stackoverflow.com/questions/tagged/google-mlkit)
-
-## License
-
-Copyright 2020 Google, Inc.
-
-Licensed to the Apache Software Foundation (ASF) under one or more contributor
-license agreements.  See the NOTICE file distributed with this work for
-additional information regarding copyright ownership.  The ASF licenses this
-file to you under the Apache License, Version 2.0 (the "License"); you may not
-use this file except in compliance with the License.  You may obtain a copy of
-the License at
-
-  http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
-WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the
-License for the specific language governing permissions and limitations under
-the License.
++ MainActivity : 애플리케이션이 실행되는 액티비티
++ PermissionSupport : 카메라와 마이크의 권한을 설정하는 클래스
++ VisionProcessorBase : 카메라를 통해 영상을 가져올 때 전처리 하는 클래스

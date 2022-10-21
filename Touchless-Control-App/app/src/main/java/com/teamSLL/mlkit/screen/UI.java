@@ -69,8 +69,6 @@ public class UI {
     private LinearLayout loading;
     private LinearLayout camera_view; // 2022-10-17 카메라 온오프
 
-    private SpeechToText stt;
-    private SpeechRecognizer speechRecognizer;
     private DrawerLayout settingLayout;
 
     private boolean refresh = false;
@@ -101,7 +99,7 @@ public class UI {
         this.camera_view = activity.findViewById(R.id.camera_view);   // 2022-10-17 카메라 온오프
         this.cameraBtn = activity.findViewById(R.id.camera_button);  // 2022-10-17 카메라 온오프
         camera_view.setVisibility(View.INVISIBLE);   // 2022-10-17 카메라 온오프    카메라 안보이게 초기화
-
+        cameraBtn.setBackgroundResource(R.drawable.round_button_click);
 
         settingLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED);
         settingBtn.setOnClickListener(new View.OnClickListener() {

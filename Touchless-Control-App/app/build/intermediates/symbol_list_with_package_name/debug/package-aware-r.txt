@@ -889,6 +889,7 @@ drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable ic_arrow_dropdown
 drawable ic_baseline_dehaze_48
+drawable ic_camera
 drawable ic_close
 drawable ic_home
 drawable ic_loading
@@ -1022,6 +1023,8 @@ id bottom
 id bounce
 id buttonPanel
 id cache_measures
+id camera_button
+id camera_view
 id cancel_button
 id center
 id center_vertical

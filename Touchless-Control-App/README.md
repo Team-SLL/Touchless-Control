@@ -3,7 +3,6 @@
 > ML Kit의 Face Detection 기술을 활용한 Touchless 모바일 제어 기술          
 > Touchless YouTube application using ML KIT‘s Face Detection.
 
-- [2021-02 : 01-03 산학프로젝트 문서](https://space.malangmalang.com/open?fileId=m:0:944584451&lang=ko)      
 - [2022-01 : 01-03 캡스톤디자인 문서](https://space.malangmalang.com/open?fileId=m:0:1041409819&lang=ko)           
 - [깃허브](https://github.com/Team-SLL/Touchless-Control)                    
 

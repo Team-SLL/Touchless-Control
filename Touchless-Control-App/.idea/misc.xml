@@ -21,6 +21,8 @@
         <entry key="..\:/Users/arist/Desktop/new/mlkit-quickstart/app/src/main/res/layout/youtube_main_page_A.xml" value="0.29347826086956524" />
         <entry key="..\:/Users/arist/Desktop/new/mlkit-quickstart/app/src/main/res/layout/youtube_main_page_B.xml" value="0.29347826086956524" />
         <entry key="..\:/Users/arist/Desktop/new/mlkit-quickstart/app/src/main/res/xml/network_security_config.xml" value="0.19739583333333333" />
+        <entry key="..\:/andoird/Touchless-Control/Touchless-Control-App/app/src/main/res/layout-land/activity_vision_camerax_live_preview.xml" value="0.2156084656084656" />
+        <entry key="..\:/andoird/Touchless-Control/Touchless-Control-App/app/src/main/res/layout-land/main_activity.xml" value="0.2156084656084656" />
         <entry key="..\:/andoird/Touchless-Control/app/src/main/res/drawable/list_item_background.xml" value="0.1" />
         <entry key="..\:/andoird/Touchless-Control/app/src/main/res/drawable/oval.xml" value="0.206" />
         <entry key="..\:/andoird/Touchless-Control/app/src/main/res/layout-land/activity_vision_camerax_live_preview.xml" value="0.1328125" />
@@ -53,7 +55,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

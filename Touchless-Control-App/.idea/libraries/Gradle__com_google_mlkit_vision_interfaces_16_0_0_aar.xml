@@ -2,8 +2,6 @@
   <library name="Gradle: com.google.mlkit:vision-interfaces:16.0.0@aar">
     <CLASSES>
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/415d05a2d4c98bd2869ba791f3605d18/transformed/jetified-vision-interfaces-16.0.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/0b942307fd6c42300ce5c901dc977989/transformed/jetified-vision-interfaces-16.0.0/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/0b942307fd6c42300ce5c901dc977989/transformed/jetified-vision-interfaces-16.0.0/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/0b942307fd6c42300ce5c901dc977989/transformed/jetified-vision-interfaces-16.0.0/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/087068a34021cdba64e778289cf33765/jetified-vision-interfaces-16.0.0/AndroidManifest.xml" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/087068a34021cdba64e778289cf33765/jetified-vision-interfaces-16.0.0/res" />

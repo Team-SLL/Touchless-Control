@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\mlkit\\Touchless-Control-App\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v25\\values-v25.xml",
+            "outputFile": "D:\\andoird\\Touchless-Control\\Touchless-Control-App\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v25\\values-v25.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\User\\.gradle\\caches\\transforms-2\\files-2.1\\3be7723bb28824ea593001a1c490bc6d\\appcompat-1.2.0\\res\\values-v25\\values-v25.xml",
+                    "source": "C:\\Users\\arist\\.gradle\\caches\\transforms-2\\files-2.1\\3be7723bb28824ea593001a1c490bc6d\\appcompat-1.2.0\\res\\values-v25\\values-v25.xml",
                     "from": {
                         "startLines": "2,3,4,6",
                         "startColumns": "4,4,4,4",

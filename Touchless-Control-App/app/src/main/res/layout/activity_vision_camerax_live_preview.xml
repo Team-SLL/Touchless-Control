@@ -190,11 +190,6 @@
               android:gravity="bottom|center|center_vertical"
               android:visibility="visible">
 
-            <ImageButton
-                android:id="@+id/camera_button"
-                android:layout_width="30dp"
-                android:layout_height="30dp" />
-
             <LinearLayout
                 android:id="@+id/camera_view"
                 android:layout_width="wrap_content"

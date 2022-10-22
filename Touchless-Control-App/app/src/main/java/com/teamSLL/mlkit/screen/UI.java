@@ -45,7 +45,7 @@ public class UI {
     public static final short SEARCH_OPEN = 7;
     public static final short SEARCH_CLOSE = 8;
     public static final short CLOSE_APP = 127;
-    public short CAMERA_SHOW = 0;   // 2022-10-17 카메라 온오프
+    public short CAMERA_SHOW = 1;   // 2022-10-17 카메라 온오프
 
     // youtube UI items
     private Activity activity;
@@ -98,7 +98,7 @@ public class UI {
 
         this.camera_view = activity.findViewById(R.id.camera_view);   // 2022-10-17 카메라 온오프
         this.cameraBtn = activity.findViewById(R.id.camera_button);  // 2022-10-17 카메라 온오프
-        camera_view.setVisibility(View.INVISIBLE);   // 2022-10-17 카메라 온오프    카메라 안보이게 초기화
+        camera_view.setVisibility(View.VISIBLE);   // 2022-10-17 카메라 온오프    카메라 안보이게 초기화
         cameraBtn.setBackgroundResource(R.drawable.round_button_click);
 
         settingLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED);

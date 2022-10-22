@@ -2,8 +2,6 @@
   <library name="Gradle: com.google.firebase:firebase-components:16.1.0@aar">
     <CLASSES>
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/1db9b6f4042eb76202aacdba815a749d/transformed/jetified-firebase-components-16.1.0/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/88022fb0aaac92cfc8edda2ae895917c/transformed/jetified-firebase-components-16.1.0/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/88022fb0aaac92cfc8edda2ae895917c/transformed/jetified-firebase-components-16.1.0/AndroidManifest.xml" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/88022fb0aaac92cfc8edda2ae895917c/transformed/jetified-firebase-components-16.1.0/res" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e4bbe2380be6faaf9537aba6247d13c3/jetified-firebase-components-16.1.0/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e4bbe2380be6faaf9537aba6247d13c3/jetified-firebase-components-16.1.0/res" />
